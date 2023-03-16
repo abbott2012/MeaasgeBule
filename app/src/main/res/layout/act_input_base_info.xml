@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_dcdfe6"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ll_back_pro"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="用户注册"
+            android:textColor="@color/color_404040"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View style="@style/commenView" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="第三步: 个人信息登录"
+                android:textColor="@color/color_3270ed"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="身份证号"
+                    android:textColor="@color/color_404040"
+                    android:textSize="12sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ucardid_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="请用OCR识别身份证"
+                        android:maxLength="18"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/color_000000"
+                        android:textColorHint="@color/color_cccccc"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/ocr_idcard_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:text="OCR识别"
+                        android:textColor="@color/dodgerblue"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View style="@style/commenView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/uname_tip_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="姓名"
+                    android:textColor="@color/color_404040"
+                    android:textSize="12sp" />
+
+
+                <EditText
+                    android:id="@+id/uname_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:maxLength="15"
+                    android:minHeight="40dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/color_000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View style="@style/commenView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="性别"
+                    android:textColor="@color/color_404040"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:id="@+id/check_box_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:button="@drawable/no_select_point"
+                    android:paddingLeft="10dp"
+                    android:text="男"
+                    android:textColor="@color/color_cccccc"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/check_box_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:button="@drawable/no_select_point"
+                    android:paddingLeft="10dp"
+                    android:text="女"
+                    android:textColor="@color/color_cccccc"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View style="@style/commenView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="出生日期"
+                    android:textColor="@color/color_404040"
+                    android:textSize="12sp" />
+
+
+                <EditText
+                    android:id="@+id/ubirthday_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:maxLength="15"
+                    android:minHeight="40dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/color_000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View style="@style/commenView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="出生地"
+                    android:textColor="@color/color_404040"
+                    android:textSize="12sp" />
+
+
+                <EditText
+                    android:id="@+id/uresidence_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:background="@null"
+                    android:minHeight="40dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/color_000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View style="@style/commenView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="用户类型"
+                    android:textColor="@color/color_404040"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/user_type_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:entries="@array/user_type" />
+            </LinearLayout>
+
+            <View style="@style/commenView"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="组织机构"
+                    android:textColor="@color/color_404040"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_shen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <com.guoji.mobile.cocobee.view.MySpinner
+                        android:id="@+id/spinner_sheng"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"></com.guoji.mobile.cocobee.view.MySpinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_shi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <com.guoji.mobile.cocobee.view.MySpinner
+                        android:id="@+id/spinner_shi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></com.guoji.mobile.cocobee.view.MySpinner>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/commenView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="组织机构"
+                    android:textColor="@color/color_404040"
+                    android:textSize="12sp"
+                    android:visibility="invisible"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_xian"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <com.guoji.mobile.cocobee.view.MySpinner
+                        android:id="@+id/spinner_xian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"></com.guoji.mobile.cocobee.view.MySpinner>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_qu"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <com.guoji.mobile.cocobee.view.MySpinner
+                        android:id="@+id/spinner_qu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"></com.guoji.mobile.cocobee.view.MySpinner>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reg_next"
+                style="@style/commenBtn"
+                android:layout_marginTop="50dp"
+                android:text="注册" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

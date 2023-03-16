@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--搜索图标左边margin-->
+    <attr name="SearchBarIconMarginLeft" format="dimension"/>
+    <!--搜索图标右边margin-->
+    <attr name="SearchBarIconMarginRight" format="dimension"/>
+    <!--搜索图标-->
+    <attr name="SearchBarIconSrc" format="reference"/>
+    <!--清除图标左边margin-->
+    <attr name="ClearIconMarginLeft" format="dimension"/>
+    <!--清除图标右边margin-->
+    <attr name="ClearIconMarginRight" format="dimension"/>
+    <!--清除图标-->
+    <attr name="ClearIconSrc" format="reference"/>
+    <!--搜索文字大小-->
+    <attr name="SearchTextSize" format="dimension"/>
+    <!--搜索文字颜色-->
+    <attr name="SearchTextColor" format="color"/>
+    <declare-styleable name="CommolySearchView">
+        <attr name="SearchBarIconMarginLeft"/>
+        <attr name="SearchBarIconMarginRight"/>
+        <attr name="SearchBarIconSrc"/>
+        <attr name="ClearIconMarginLeft"/>
+        <attr name="ClearIconMarginRight"/>
+        <attr name="ClearIconSrc"/>
+        <attr name="SearchTextSize"/>
+        <attr name="SearchTextColor"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="SwitchMultiButton">
+        <attr name="strokeRadius" format="dimension"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="selectedTab" format="integer"/>
+        <attr name="selectedColor" format="color|reference"/>
+    </declare-styleable>
+
+    <!-- 延迟按钮延时属性 -->
+    <declare-styleable name="DelayButton">
+        <!-- 延时时间-->
+        <attr name="db_duration" format="integer"/>
+        <!--计时的时候的背景-->
+        <attr name="db_go_background" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CountDownProgress">
+        <attr name="in_circle_color" format="color"/>
+        <attr name="progressBarType">
+            <enum name="count" value="0x01"/>
+            <enum name="count_back" value="0x02"/>
+        </attr>
+        <attr name="progressDirection">
+            <enum name="forward" value="0x01"/>
+            <enum name="reverse" value="0x02"/>
+        </attr>
+        <attr name="outLineColor" format="color"/>
+        <attr name="outLineWidth" format="dimension"/>
+        <attr name="progressLineColor" format="color"/>
+        <attr name="progressLineWidth" format="dimension"/>
+        <attr name="startPos">
+            <enum name="top" value="0x01"/>
+            <enum name="left" value="0x02"/>
+            <enum name="right" value="0x03"/>
+            <enum name="bottom" value="0x04"/>
+        </attr>
+    </declare-styleable>
+
+
+    <!--MoneyTextView属性-->
+    <declare-styleable name="MoneyTextView">
+        <attr name="format" format="string"/>
+        <attr name="symbol" format="string"/>
+        <attr name="amount" format="float"/>
+        <attr name="symbolMargin" format="dimension"/>
+        <attr name="decimalMargin" format="dimension"/>
+        <attr name="decimalSeparator" format="string"/>
+
+        <attr name="baseTextSize" format="dimension"/>
+        <attr name="symbolTextSize" format="dimension"/>
+        <attr name="decimalDigitsTextSize" format="dimension"/>
+
+        <attr name="symbolGravity">
+            <flag name="start" value="0x01"/>
+            <flag name="end" value="0x02"/>
+            <flag name="top" value="0x04"/>
+            <flag name="bottom" value="0x08"/>
+        </attr>
+
+        <attr name="decimalGravity" format="enum">
+            <enum name="top" value="4"/>
+            <enum name="bottom" value="8"/>
+        </attr>
+
+        <attr name="baseGravity">
+            <enum name="left" value="0x01"/>
+            <enum name="right" value="0x02"/>
+            <enum name="top" value="0x04"/>
+            <enum name="bottom" value="0x08"/>
+            <enum name="centerVertical" value="0x16"/>
+            <enum name="centerHorizontal" value="0x32"/>
+            <enum name="center" value="0x48"/>
+        </attr>
+
+        <attr name="baseTextColor" format="color"/>
+        <attr name="symbolTextColor" format="color"/>
+        <attr name="decimalTextColor" format="color"/>
+
+        <attr name="includeDecimalSeparator" format="boolean"/>
+        <attr name="decimalUnderline" format="boolean"/>
+        <attr name="textMidLine" format="boolean"/>
+        <attr name="textBold" format="boolean"/>
+        <attr name="fontPath" format="string"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="SpringView">
+        <attr name="type">
+            <enum name="overlap" value="0"/>
+            <enum name="follow" value="1"/>
+        </attr>
+        <attr name="give">
+            <enum name="both" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="bottom" value="2"/>
+            <enum name="none" value="3"/>
+        </attr>
+        <attr name="header" format="reference"/>
+        <attr name="footer" format="reference"/>
+    </declare-styleable>
+
+    <!--气泡属性-->
+    <declare-styleable name="bubble">
+        <attr name="shadowColor" format="color"/>
+        <attr name="padding" format="dimension"/>
+        <attr name="strokeWidths" format="float"/>
+        <attr name="cornerRadius" format="float"/>
+        <attr name="halfBaseOfLeg" format="dimension"/>
+    </declare-styleable>
+
+</resources>

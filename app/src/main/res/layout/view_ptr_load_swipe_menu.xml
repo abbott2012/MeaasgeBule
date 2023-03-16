@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.bql.statetypelayout.AnimationStateTypeLayout
+    android:id="@+id/stateLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <com.bql.pulltorefreshandloadmore.ultraptr.PtrClassicFrameLayout
+        android:id="@+id/prt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptr_duration_to_close="500"
+        app:ptr_duration_to_close_header="800">
+
+        <com.bql.pulltorefreshandloadmore.loadmoreview.LoadMoreSwipeRecyclerView
+            android:id="@+id/rcv_load_more_swipe"
+            style="@style/LoadMoreRcvStyle">
+        </com.bql.pulltorefreshandloadmore.loadmoreview.LoadMoreSwipeRecyclerView>
+    </com.bql.pulltorefreshandloadmore.ultraptr.PtrClassicFrameLayout>
+
+</com.bql.statetypelayout.AnimationStateTypeLayout>
+

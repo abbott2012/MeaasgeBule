@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="是否需要购买保险？选择是，即表示您已经阅读并同意:"
+        android:textColor="@android:color/black"
+        />
+
+    <TextView
+        android:id="@+id/instruction_tv"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="《电子防盗标签保障说明》"
+        android:textColor="@drawable/bg_text"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tip"
+        />
+
+</RelativeLayout>

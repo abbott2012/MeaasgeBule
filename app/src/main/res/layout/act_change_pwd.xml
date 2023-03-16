@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_titlebar">
+
+        <ImageButton
+            android:id="@+id/back_ib"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="修改密码"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认"
+            android:textSize="15sp"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_below="@id/layout_top"
+        android:background="@color/gainsboro"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/old_pwd_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="15sp"
+            android:text="原密码"
+            />
+
+
+        <EditText
+            android:id="@+id/old_pwd_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg_style"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:inputType="textPassword"
+            android:minHeight="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:textSize="15sp"/>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="15sp"
+            android:text="新密码"
+            />
+
+
+        <EditText
+            android:id="@+id/new_pwd_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg_style"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:inputType="textPassword"
+            android:minHeight="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:textSize="15sp"/>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="15sp"
+            android:text="确认密码"
+            />
+
+
+        <EditText
+            android:id="@+id/sure_new_pwd_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg_style"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:inputType="textPassword"
+            android:minHeight="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:textSize="15sp"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

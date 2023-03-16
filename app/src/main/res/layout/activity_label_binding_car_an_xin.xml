@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_dcdfe6"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/size15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="标签号"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="*"
+                    android:textColor="#ff0000"/>
+
+                <EditText
+                    android:id="@+id/et_label_bind"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:hint="请输入或点击右侧图标扫码"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/color_b3b3b3"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_scan"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/bar_scan"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size26"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginTop="@dimen/size12"
+                android:gravity="center_vertical"
+                android:text="请填写真实信息,虚假信息将导致保险失效!"
+                android:textColor="#ff0000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="品牌型号"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="*"
+                    android:textColor="#ff0000"/>
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:hint="车辆的品牌和型号"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/color_b3b3b3"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View style="@style/commenView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="车牌号"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="*"
+                    android:textColor="#ff0000"/>
+
+                <EditText
+                    android:id="@+id/et_car_num"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="车辆牌号"
+                    android:maxLength="20"
+                    android:textColor="#000000"
+                    android:singleLine="true"
+                    android:textColorHint="@color/color_b3b3b3"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View style="@style/commenView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="车架号"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+
+                <EditText
+                    android:id="@+id/et_car_jia_num"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:hint="输入车架号"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/color_b3b3b3"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View style="@style/commenView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="购买价格"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="*"
+                    android:textColor="#ff0000"/>
+
+                <EditText
+                    android:id="@+id/et_car_buy_price"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:hint="车辆购买价格(元)"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/color_b3b3b3"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View style="@style/commenView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="购买时间"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="*"
+                    android:textColor="#ff0000"/>
+
+                <EditText
+                    android:id="@+id/et_car_buy_time"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="选择购买车辆时间"
+                    android:focusable="false"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/color_b3b3b3"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_bind_biaoqian"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:background="@color/color_3270ed"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize20"/>
+</LinearLayout>

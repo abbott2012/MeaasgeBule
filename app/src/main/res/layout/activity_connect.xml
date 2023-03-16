@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_titlebar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/connect"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="@string/no_connect"
+            android:textColor="@android:color/white" />
+
+        <ImageButton
+            android:id="@+id/back_ib"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/device_info_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+
+        <ImageView
+            android:id="@+id/main_pic"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/device_info_tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bt"/>
+
+        <Button
+            android:id="@+id/btConnectDevice"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/main_pic"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_style_blue"
+            android:gravity="center"
+            android:text="@string/connect_device"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

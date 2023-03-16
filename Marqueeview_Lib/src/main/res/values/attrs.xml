@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--MarqueeView 属性-->
+    <declare-styleable name="MarqueeView">
+        <attr name="mv_interval" format="integer|reference"/>
+        <attr name="mv_animDuration" format="integer|reference"/>
+        <attr name="mv_textSize" format="dimension|reference"/>
+        <attr name="mv_textColor" format="color|reference"/>
+        <attr name="mv_singleLine" format="boolean"/>
+        <attr name="mv_inAnim" format="reference"/>
+        <attr name="mv_outAnim" format="reference"/>
+        <attr name="mv_showAnim" format="boolean"/>
+        <attr name="mv_gravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

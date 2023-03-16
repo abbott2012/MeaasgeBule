@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="StateTypeLayout">
+
+        <!-- Loading View Style-->
+
+        <!-- 加载进度条宽度-->
+        <attr name="loadingProgressBarWidth" format="dimension"/>
+        <!-- 加载进度条高度-->
+        <attr name="loadingProgressBarHeight" format="dimension"/>
+        <!-- 加载背景颜色-->
+        <attr name="loadingBackgroundColor" format="color"/>
+        <!-- 加载字体颜色-->
+        <attr name="loadingTextColor" format="color"/>
+        <!-- 加载进度条颜色-->
+        <attr name="loadingProgressBarColor" format="color"/>
+        <!-- 加载字体大小 -->
+        <attr name="loadingTextSize" format="dimension"/>
+
+        <!-- 加载帧动画 -->
+        <attr name="loadingDrawable" format="reference"/>
+
+
+        <!-- Empty View Style-->
+        <!-- 空视图 图片宽度-->
+        <attr name="emptyImageWidth" format="dimension"/>
+        <!-- 空视图 图片高度-->
+        <attr name="emptyImageHeight" format="dimension"/>
+        <!-- 空视图 标题字体大小-->
+        <attr name="emptyTitleTextSize" format="dimension"/>
+        <!-- 空视图 内容字体大小-->
+        <attr name="emptyContentTextSize" format="dimension"/>
+        <!-- 空视图 标题字体颜色-->
+        <attr name="emptyTitleTextColor" format="color"/>
+        <!-- 空视图 内容字体颜色-->
+        <attr name="emptyContentTextColor" format="color"/>
+        <!-- 空视图 背景颜色-->
+        <attr name="emptyBackgroundColor" format="color"/>
+        <!-- 错误视图按钮字体颜色-->
+        <attr name="emptyButtonTextColor" format="color"/>
+
+
+        <!-- Error View Style-->
+        <!-- 错误视图 图片宽度-->
+        <attr name="errorImageWidth" format="dimension"/>
+        <!-- 错误视图 图片高度-->
+        <attr name="errorImageHeight" format="dimension"/>
+        <!-- 错误视图 标题字体大小-->
+        <attr name="errorTitleTextSize" format="dimension"/>
+        <!-- 错误视图 内容字体大小-->
+        <attr name="errorContentTextSize" format="dimension"/>
+        <!-- 错误视图 标题字体颜色-->
+        <attr name="errorTitleTextColor" format="color"/>
+        <!-- 错误视图 内容字体颜色-->
+        <attr name="errorContentTextColor" format="color"/>
+        <!-- 错误视图按钮字体颜色-->
+        <attr name="errorButtonTextColor" format="color"/>
+        <!-- 错误视图 背景颜色-->
+        <attr name="errorBackgroundColor" format="color"/>
+        <!--是否显示动画-->
+        <attr name="isShowAnim" format="boolean"/>
+    </declare-styleable>
+</resources>

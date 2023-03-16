@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_titlebar">
+
+        <ImageButton
+            android:id="@+id/back_ib"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+
+
+        <com.guoji.mobile.cocobee.view.PointSearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/back_ib"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:dividerHeight="15dp"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:background="@color/gainsboro"
+        android:layout_below="@id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/corner_rec_white"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title_car_label"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="@string/luanguage_title"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/textSize16"/>
+
+    <View style="@style/commenView"/>
+
+    <TextView
+        android:id="@+id/tv_chinese"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size44"
+        android:gravity="center"
+        android:text="@string/luanguage_type_c"/>
+
+    <View style="@style/commenView"/>
+
+    <TextView
+        android:id="@+id/tv_english"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size44"
+        android:gravity="center"
+        android:text="@string/luanguage_type_e"/>
+
+</LinearLayout>

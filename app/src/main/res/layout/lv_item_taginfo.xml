@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tag_id_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="标签ID："
+        android:textColor="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/low_voltage_warn_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tag_id_tv"
+        android:layout_below="@id/tag_id_tv"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        />
+
+
+    <TextView
+        android:id="@+id/car_no_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/low_voltage_warn_tv"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@id/low_voltage_warn_tv"
+        android:text="车牌："
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        />
+
+
+    <TextView
+        android:id="@+id/rssi_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/tag_id_tv"
+        android:layout_marginRight="8dp"
+        android:text="RSSI："
+        android:textColor="@android:color/white"
+        />
+
+</RelativeLayout>

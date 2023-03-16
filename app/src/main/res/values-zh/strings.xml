@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Demo</string>
+
+    <string name="car_bind_tag_id"><font color='red'>*</font>绑定标签号：</string>
+    <string name="car_host_name"><font color='red'>*</font>车主姓名：</string>
+    <string name="host_name"><font color='red'>*</font>姓名：</string>
+    <string name="car_host_identify"><font color='red'>*</font>身份证号码：</string>
+    <string name="guardian_identify">监护人身份证号：</string>
+    <string name="car_host_phone"><font color='red'>*</font>车主手机号码：</string>
+    <string name="car_host_address"><font color='red'>*</font>性别：</string>
+    <string name="car_host_residence"><font color='red'>*</font>现居地址：</string>
+    <string name="car_host_policestation"><font color='red'>*</font>组织机构：</string>
+    <string name="car_host_uworkaddress">工作单位：</string>
+    <string name="car_host_birthday"><font color='red'>*</font>出生日期：</string>
+    <string name="uurgencyname"><font color='red'>*</font>紧急联系人：</string>
+    <string name="uurgencyphone"><font color='red'>*</font>紧急联系人电话：</string>
+    <string name="car_plate_num"><font color='red'>*</font>车牌号：</string>
+    <string name="car_buytime"><font color='red'>*</font>购买时间：</string>
+    <string name="ptype_tip"><font color='red'>*</font>人员类型：</string>
+
+
+    <string name="company_name">深圳市华士精成科技有限公司</string>
+    <string name="fileManage">文件管理</string>
+    <string name="backLastDir">返回上一层</string>
+    <string name="action_settings">Settings</string>
+    <string name="chooserIdCardType">证件类型</string>
+    <string name="ActivationProgram">激活程序</string>
+    <string name="takePicture">扫描</string>
+    <string name="license_verification_failed">OCR识别授权验证失败</string>
+    <string name="online_activation">在线激活</string>
+    <string name="activation_success">激活成功</string>
+    <string name="dialog_title">首次使用若能联网请在此填写序列号，不区分大小写，并点击“授权验证”按钮.</string>
+    <string name="back">返回</string>
+    <string name="exit">退出</string>
+    <string name="importRecog">导入识别</string>
+    <string name="back_confirm">再按一次退出</string>
+    <string name="chooseRecogType">选择识别类型</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="unsupport_auto_focus">，没有对焦功能</string>
+    <string name="toast_autofocus_failure">对焦失败</string>
+    <string name="unsupportflash">不支持闪光灯</string>
+    <string name="exception">未识别代码：</string>
+    <string name="exception1">激活失败代码：</string>
+    <string name="exception2">识别初始化失败代码：</string>
+    <string name="exception3">识别载入图像失败，请重新识别代码：</string>
+    <string name="exception4">识别载入图像失败，识别初始化失败,请重试代码：</string>
+    <string name="exception5">识别载入图像失败代码：</string>
+    <string name="exception6">识别失败代码：</string>
+    <string name="exception7">免费次数已用完，请购买!</string>
+    <string name="exception8">次数异常:</string>
+    <string name="exception9">识别证件类型或拍照方式不正确</string>
+    <string name="recognized_failed">识别失败</string>
+    <string name="please_connect_network">请连接网络</string>
+    <string name="network_unused">网络不可用</string>
+
+
+    <!-- 证件类型 -->
+    <string name="passport">护照</string>
+    <string name="ID_card">二代身份证</string>
+    <string name="EPT_HK_Macau">港澳通行证</string>
+    <string name="IDCard_Macau">澳门身份证</string>
+    <string name="New_IDCard_Macau">新版澳门身份证</string>
+    <string name="MRTTTP">大陆居民往来台湾通行证</string>
+    <string name="visa">签证</string>
+    <string name="NEEPT_HK_Macau">新版港澳通行证</string>
+    <string name="HRPO">回乡证(正面)</string>
+    <string name="HRPR">回乡证(背面)</string>
+    <string name="MyKad">马来西亚身份证</string>
+    <!-- 马来西亚身份证的叫法 -->
+    <string name="TRTTTMTP">台胞证</string>
+    <string name="NTRTTTMTP">新版台胞证(正面)</string>
+    <string name="NTRTTTMTP_01">新版台胞证(背面)</string>
+    <string name="Taiwan_IDcard_front">台湾身份证(正面)</string>
+    <string name="Taiwan_IDcard_reverse">台湾身份证(背面)</string>
+    <string name="National_health_insurance_card">全民健康保险卡</string>
+    <string name="Driver_license">新西兰驾照</string>
+    <string name="California_driver_license">加利福尼亚驾照</string>
+    <!-- 加利福尼亚驾照 -->
+    <string name="HK_IDcard">香港身份证</string>
+    <string name="US">美国</string>
+    <string name="Singapore_IDcard">新加坡身份证</string>
+    <string name="mrz">机读码</string>
+    <string name="china_driver">中国驾照</string>
+    <string name="china_driving_license">中国行驶证</string>
+    <string name="save_full_picture">保存整图</string>
+    <string name="id_card_text1">请将人像面放在框内,并调整好光线</string>
+    <string name="id_card_text2">请调整好光线,避免反光</string>
+
+
+    <!--扫码-->
+    <string name="scan_barcode_hint">将条形码对入取景框，即可自动扫描</string>
+    <string name="scan_qrcode_hint">将二维码对入取景框，即可自动扫描</string>
+    <string name="scan_allcode_hint">将二维码或条形码对入取景框，即可自动扫描</string>
+
+
+
+
+    <!--车牌识别-->
+    <string name="camera_tv_prompt_space">点击屏幕对焦</string>
+    <string name="camera_setting_language">识别语言</string>
+    <string name="camera_setting_viewfinder">取景模式</string>
+    <string name="camera_setting_focus">对焦模式</string>
+    <string name="camera_setting_length">识别语言  英语/中英欧</string>
+    <string name="camera_setting_title">系统设置</string>
+    <string name="camera_setting_focus_manaul">手动/自动</string>
+
+
+    <!--主页-->
+    <string name="main_home">查询</string>
+    <string name="main_setting">管理</string>
+    <string name="main_me">我的</string>
+
+    <string name="price_format">#####0.00</string>
+    <string name="price_symbol">¥</string>
+    <string name="price_separator">.</string>
+
+    <string name="server_error">加载失败，请稍后再试</string>
+    <string name="net_error">您的网络好像不太给力，请稍后再试</string>
+    <string name="user_not_exist">用户不存在</string>
+    <string name="user_had_existed">该用户已经存在</string>
+    <string name="user_login_exception">用户登录异常</string>
+    <string name="database_error">数据库数据发生异常，请稍候重试</string>
+    <string name="uploading_please_wait">图片上传中，请稍候\n%1$s</string>
+    <string name="re_load">重新加载</string>
+    <string name="loading_data">正在加载数据&#8230;</string>
+    <string name="splash_text">遇见精英  品味生活</string>
+    <string name="warning">提示</string>
+
+    <string name="out">再点一次退出软件</string>
+
+
+
+
+    <!--管理界面-->
+    <string name="manager">管理</string>
+    <string name="managerbtn">切换语言</string>
+    <string name="luanguage_title">选择语言</string>
+    <string name="sure">确定</string>
+    <string name="luanguage_type_c">简体中文</string>
+    <string name="luanguage_type_e">English</string>
+    <string name="technical">技术人员</string>
+    <string name="device_connection">设备连接</string>
+    <string name="debug">安装调试</string>
+    <string name="toast_no_permission">您已禁止定位权限,需要重新开启</string>
+
+    <!--设备连接界面-->
+    <string name="connect">连接</string>
+    <string name="no_connect">未连接</string>
+<!--    <string name="connect_device">连接设备</string>-->
+    <string name="disconnect">断开连接</string>
+    <string name="bluetooth_not_open">蓝牙未打开</string>
+    <string name="bluetooth_not_enabel">蓝牙不可用</string>
+    <string name="device_not_blueth">抱歉，您的手机不支持低功耗蓝牙</string>
+    <string name="device_unknow">未知设备蓝牙类型，无法连接</string>
+    <string name="connect_success">连接成功</string>
+    <string name="connecting">连接中</string>
+    <string name="connect_error">连接出错</string>
+    <string name="blueth_disconnect">蓝牙设备连接已断开</string>
+    <string name="has_connect">已连接</string>
+    <string name="device_name">设备名称：</string>
+    <string name="device_mac">设备Mac地址：</string>
+    <string name="match_device">已配对设备</string>
+    <string name="not_match_device">未配对设备</string>
+    <string name="not_get_match_device">没有搜索到已配对设备</string>
+    <string name="not_get_other_device">没有搜索到其他可连设备</string>
+    <string name="getting_device">搜索设备中...</string>
+    <string name="select_device">请选择设备</string>
+
+    <!--安装调试-->
+    <string name="tianxian_debug">调试天线</string>
+    <string name="collector_info">采集器信息</string>
+    <string name="device_id">设备ID：</string>
+    <string name="device_id_hint">长度为15个字符</string>
+    <string name="factory_num">出厂编号：</string>
+    <string name="factory_num_hint">需单独读取</string>
+    <string name="read">读取</string>
+    <string name="remove">清除</string>
+    <string name="wireless_network_params">无线网络参数</string>
+    <string name="plat_ip_1">平台1 IP地址：</string>
+    <string name="plat_port_1">平台1端口号：</string>
+    <string name="wireless_imei">无线模块imei：</string>
+    <string name="read_triad">三元组:</string>
+    <string name="reading_triple">需单独读取三元组</string>
+    <string name="wireless_imei_hint">需单独读取(需插SIM卡)</string>
+    <string name="wireless_rssi">无线信号强度：</string>
+    <string name="tx_info">天线参数</string>
+    <string name="tx_one_zy">天线1（东）增益：</string>
+    <string name="tx_two_zy">天线2（南）增益：</string>
+    <string name="tx_three_zy">天线3（西）增益：</string>
+    <string name="tx_four_zy">天线4（北）增益：</string>
+    <string name="quchong_guolv">去重过滤(单位秒)：</string>
+    <string name="open_buzzer">打开蜂鸣器</string>
+    <string name="open_dhcp">打开DHCP</string>
+    <string name="open_direction_filter">打开方向过滤</string>
+    <string name="stop_time">停留时间(单位秒)：</string>
+    <string name="direction_filter">方向过滤时间(单位秒)：</string>
+    <string name="wire_network_params">有线网络参数</string>
+    <string name="local_ip">本地IP地址：</string>
+    <string name="local_port">本地端口号：</string>
+    <string name="sub_net_mask">子网掩码：</string>
+    <string name="gateway">网关：</string>
+    <string name="plat_ip_2">平台2 IP：</string>
+    <string name="plat_port_2">平台2端口：</string>
+    <string name="controller_status">采集器状态</string>
+    <string name="sys_time">系统时间：</string>
+    <string name="sys_time_hint">需单独读取与设置</string>
+    <string name="setting">设置</string>
+    <string name="network_status">网络状态：</string>
+    <string name="wirless_connect_ip">无线连接IP：</string>
+    <string name="wire_connect_ip">有线连接IP：</string>
+    <string name="label_cache_total">标签缓存数：</string>
+    <string name="wireless">无线：</string>
+    <string name="wire">有线：</string>
+    <string name="filter">过滤：</string>
+    <string name="upload_info">上报信息</string>
+    <string name="read_device_info">读设备信息</string>
+    <string name="set_params">设置参数</string>
+
+    <string name="no_connect_read">未连接设备,无法读取</string>
+    <string name="reading">正在读取...</string>
+    <string name="enter_device_id">请输入设备ID</string>
+    <string name="device_id_length_less">设备ID长度不足</string>
+    <string name="ip_is_empty">ip地址不能为空</string>
+    <string name="port_is_empty">端口号不能为空</string>
+    <string name="triple_is_empty">三元组不能为空</string>
+    <string name="port_rang">端口号输入范围为0～65535</string>
+    <string name="zy_rang">增益值为0～31</string>
+    <string name="rssi_rang">rssi值为-128～0</string>
+    <string name="quchong_rang">去重过滤值为0～65526</string>
+    <string name="stop_time_filter">方向过滤值为0～255</string>
+    <string name="stop_time_rang">停留时间值为0~65535</string>
+    <string name="local_ip_empty">本地 ip地址不能为空</string>
+    <string name="local_port_empty">本地端口号不能为空</string>
+    <string name="sub_net_mask_empty">子网掩码不能为空</string>
+    <string name="gateway_empty">网关不能为空</string>
+    <string name="plat_ip_2_empty">平台2 ip不能为空</string>
+    <string name="plat_port_2_empty">平台2端口不能为空</string>
+    <string name="setting_params">正在设置参数...</string>
+    <string name="wireless_has_connect">无线已连接</string>
+    <string name="not_connect">无连接</string>
+    <string name="wire_has_connect">有线已连接</string>
+    <string name="wire_wireless_has_connect">无线/有线 已连接</string>
+    <string name="no_support">不支持</string>
+    <string name="read_device_fail">读取设备信息失败</string>
+    <string name="notify">提示</string>
+    <string name="notify_content">采集器信息已存在，是否覆盖？</string>
+    <string name="no">否</string>
+    <string name="yes">是</string>
+    <string name="sys_problem">系统维护，请稍后操作！</string>
+    <string name="upload_now">正在上报...</string>
+    <string name="upload_success">上报成功</string>
+    <string name="upload_fail">上报失败</string>
+    <string name="set_params_success">参数设置成功</string>
+    <string name="set_params_fail">参数设置失败</string>
+    <string name="read_fail">读取失败</string>
+    <string name="set_success">设置成功</string>
+    <string name="set_fail">设置失败</string>
+    <string name="blueth_dismiss">蓝牙Socket已丢失，请重新连接设备</string>
+    <string name="none">无</string>
+
+    <!--调试天线-->
+    <string name="tianxian_info">天线信息</string>
+    <string name="device_cache_label_total">设备缓存标签总数：</string>
+    <string name="label_num">目标标签号：</string>
+    <string name="tx_one">天线1（东）</string>
+    <string name="read_count">读取次数：</string>
+    <string name="tx_two">天线2（南）</string>
+    <string name="tx_three">天线3（西）</string>
+    <string name="tx_four">天线4（北）</string>
+    <string name="tx_one_read_label">天线1读取标签数：</string>
+    <string name="tx_two_read_label">天线2读取标签数：</string>
+    <string name="tx_three_read_label">天线3读取标签数：</string>
+    <string name="tx_four_read_label">天线4读取标签数：</string>
+    <string name="start_read">开始读卡</string>
+    <string name="stop_read">停止读卡</string>
+    <string name="no_connect_set">未连接设备，无法设置参数</string>
+    <string name="label_length_error">标签号的长度为12个字符</string>
+    <string name="reading_now">当前已在读卡</string>
+    <string name="this_not_support">此版本暂不支持</string>
+    <string name="has_stop_read">已停止读卡</string>
+
+    <!--天线信息-->
+    <string name="version">版本：</string>
+    <string name="zengyi">增益：</string>
+    <string name="read_tx_info">正在读取天线信息...</string>
+    <string name="read_tx">读取天线信息</string>
+<!--    <string name="pass">跳过</string>-->
+    <string name="tx_rssi_one">天线1（东) rssi:</string>
+    <string name="tx_rssi_two">天线2（南）rssi:</string>
+    <string name="tx_rssi_three">天线3（西）rssi:</string>
+    <string name="tx_rssi_four">天线4（北）rssi:</string>
+    <string name="need_permision">app需要开启定位权限</string>
+    <string name="settting">设置</string>
+    <string name="search">搜索</string>
+    <string name="tag_search">资产查找</string>
+    <string name="tag_reading">标签搜索</string>
+    <string name="tag_discovery">资产盘点</string>
+    <string name="tag_id">标签ID</string>
+    <string name="asset_description">资产描述</string>
+    <string name="y_n">Y/N</string>
+    <string name="state_connected">状态:已连接</string>
+    <string name="export_excel">导出Excel</string>
+    <string name="suspend">暂停</string>
+    <string name="turn_sound_off">关闭声音</string>
+    <string name="open_the_sound">打开声音</string>
+    <string name="no_found_excel">未找到Excel文件</string>
+    <string name="inventory_time">盘点时间</string>
+    <string name="export_success">导出成功</string>
+    <string name="write_excel_error">写入Excel文件错误</string>
+    <string name="unconnected_device">未连接设备，无法操作</string>
+    <string name="state_unconnected">状态:未连接</string>
+    <string name="stop">已停止</string>
+    <string name="stop_reading">停止读取</string>
+    <string name="start_reading">开始读取</string>
+    <string name="unconnected_device_not_search">未连接设备，无法搜索标签</string>
+    <string name="socket_lost">蓝牙Socket已丢失，请重新连接设备</string>
+    <string name="please_input_file_name">请输入文件名</string>
+    <string name="file_name_not_null">文件名不能为空</string>
+    <string name="file_name_path">文件名路径</string>
+
+    <!--标签搜索-->
+    <string name="tags_search">标签搜索</string>
+    <string name="patrol_search">【巡逻】</string>
+    <string name="no_bukong_data">没有布控数据</string>
+    <string name="search_title">【搜索】</string>
+    <string name="tag_total">标签总数:</string>
+    <string name="no_detail_info">该标签没有详细信息</string>
+    <string name="tags_id">) 标签ID：</string>
+    <string name="car_tag">车辆标签</string>
+    <string name="car_num">车牌：</string>
+    <string name="person_tag">人员标签</string>
+    <string name="stop_scan">停止扫描</string>
+    <string name="start_scan">开始扫描</string>
+    <string name="clear_record">清空记录</string>
+    <string name="bukong_data">布控数据</string>
+    <string name="mode_search_patrol"><![CDATA[模式【搜索<->巡逻】]]></string>
+    <string name="not_add_data">您未添加数据到列表</string>
+    <string name="notice">温馨提示</string>
+    <string name="if_you_sure_clear">您确定要清空这些记录吗？</string>
+    <string name="has_clear">已清空</string>
+    <string name="input_tag">请输入标签号</string>
+    <string name="tag_length">标签长度为12个字符</string>
+    <string name="bukong_length">每次布控数据不得超过20条</string>
+    <string name="check">查看</string>
+    <string name="delete">删除</string>
+    <string name="delete_success">删除成功</string>
+    <string name="add">添加</string>
+    <string name="man">男</string>
+    <string name="famale">女</string>
+    <string name="car_tag_info">车辆标签信息</string>
+    <string name="person_tag_info">人员标签信息</string>
+    <string name="tag_info">标签信息</string>
+    <string name="name">姓名</string>
+    <string name="sex">性别</string>
+    <string name="phone">电话</string>
+    <string name="cno">车牌</string>
+    <string name="temp">温度:</string>
+
+</resources>

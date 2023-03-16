@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/alarm_ll"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/layout_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_alarm"
+                />
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报警信息"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/policy_ll"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/layout_selector"
+            android:layout_marginLeft="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/policy_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_policy"/>
+
+            <TextView
+                android:id="@+id/policy_tv"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保单信息"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/device_info_ll"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/layout_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/device_info_iv"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_device_info"
+                />
+
+            <TextView
+                android:id="@+id/device_info_tv"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设备信息"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/guardians_info_ll"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/layout_selector"
+            android:layout_marginLeft="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:src="@drawable/icon_guardian"
+                />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="监护对象"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_dcdfe6"
+              android:orientation="vertical">
+
+<!--    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_back_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back_arrow"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:text="关闭"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/textSize15"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/commenView"/>-->
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/size50"
+        android:src="@drawable/finish_i"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size16"
+        android:gravity="center_horizontal"
+        android:text="支付成功"
+        android:textColor="@color/color_3270ed"
+        android:textSize="@dimen/textSize14"/>
+
+    <com.guoji.mobile.cocobee.view.MoneyTextView
+        android:id="@+id/pay_price"
+        style="@style/AccountPriceStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        app:baseTextSize="@dimen/textSize14"
+        app:decimalDigitsTextSize="@dimen/textSize14"/>
+
+    <TextView
+        android:id="@+id/tv_finish"
+        style="@style/commenBtn"
+        android:layout_marginTop="@dimen/size50"
+        android:text="完成"/>
+</LinearLayout>

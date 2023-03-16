@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- TextSize -->
+    <dimen name="textSize16">16sp</dimen>
+
+
+    <dimen name="textSize13">13sp</dimen>
+    <dimen name="size15">15dp</dimen>
+    <dimen name="size25">25dp</dimen>
+    <dimen name="size8">8dp</dimen>
+
+
+</resources>

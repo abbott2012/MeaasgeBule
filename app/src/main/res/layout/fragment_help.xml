@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#dcdfe6"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <!-- &lt;!&ndash; 主题图片 &ndash;&gt;
+     <com.youth.banner.Banner
+         android:id="@+id/banner"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         app:delay_time="3000"
+         app:image_scale_type="fit_xy"
+         app:indicator_drawable_selected="@drawable/select_point"
+         app:indicator_drawable_unselected="@drawable/no_select_point"
+         app:indicator_height="@dimen/size6"
+         app:indicator_margin="@dimen/size5"
+         app:indicator_width="@dimen/size6"/>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal"/>
+    </RelativeLayout>
+</LinearLayout>

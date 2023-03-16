@@ -1,0 +1,6 @@
+include ':app', ':library', ':rippleview', ':randomtextview',
+//        ':platerecognize',
+        ':RoundView_Lib', ':ConvenientLog_Lib', ':Utils_Lib', ':TabLayout_Lib',
+        ':PullToRefreshAndLoadMore_Lib', ':MaterialProgressbar_Lib', ':recyclerview-swipe',
+        ':StateTypeLayout_Lib', ':Marqueeview_Lib', ':BaseAdapter_Lib',
+        ':slidingmenu_library', ':galleryfinal'

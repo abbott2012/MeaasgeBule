@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <SurfaceView
+        android:id="@+id/camera_sv_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <TextView
+        android:id="@+id/camera_tv_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="16dip"
+        android:text="@string/camera_tv_prompt_space"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <com.guoji.mobile.cocobee.view.CNRecogViewfinderView
+        android:id="@+id/camera_fv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/camera_result_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/camera_ll_right_bar" >
+
+        <EditText
+            android:id="@+id/camera_et_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="8dip"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:singleLine="true"
+            android:textColor="@color/gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/camera_ll_right_bar"
+        android:layout_width="100dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/camera_right_bar" >
+
+        <ImageButton
+            android:id="@+id/camera_bt_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:src="@drawable/camera_bt_pause" />
+
+        <RelativeLayout
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_above="@+id/camera_bt_pause"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp" >
+
+            <ImageButton
+                android:id="@+id/ib_center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@color/switch_position_bg" />
+
+            <ImageButton
+                android:id="@+id/ib_up"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_above="@id/ib_center"
+                android:layout_alignLeft="@id/ib_center"
+                android:background="@color/switch_position_bg"
+                android:src="@drawable/switch_up" />
+
+            <ImageButton
+                android:id="@+id/ib_down"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@id/ib_center"
+                android:layout_below="@+id/ib_center"
+                android:background="@color/switch_position_bg"
+                android:src="@drawable/switch_down" />
+
+            <ImageButton
+                android:id="@+id/ib_left"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/ib_center"
+                android:background="@color/switch_position_bg"
+                android:src="@drawable/switch_right" />
+
+            <ImageButton
+                android:id="@+id/ib_right"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/ib_center"
+                android:layout_toRightOf="@+id/ib_center"
+                android:background="@color/switch_position_bg"
+                android:src="@drawable/switch_left" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/camera_bt_pause"
+            android:orientation="vertical"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_bg_style"
+                android:text="返回"
+                 />
+
+            <Button
+                android:id="@+id/sure_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_bg_style"
+                android:layout_marginTop="20dp"
+                android:text="确定"
+                />
+
+            <Button
+                android:id="@+id/camera_bt_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_bg_style"
+                android:layout_marginTop="20dp"
+                android:text="设置"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

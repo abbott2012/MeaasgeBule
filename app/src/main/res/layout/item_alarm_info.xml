@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/size10"
+              android:layout_marginRight="@dimen/size10"
+              android:layout_marginTop="@dimen/size10"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/size10"
+              android:paddingRight="@dimen/size10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size44"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="被盗车辆"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/textSize15"/>
+
+        <TextView
+            android:id="@+id/tv_alarm_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拉萨的房价(粤B412235)"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/textSize15"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size44"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="报警时间"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/textSize15"/>
+
+        <TextView
+            android:id="@+id/tv_alarm_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-06-01"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/textSize15"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size44"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="警方反馈"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/textSize15"/>
+
+        <TextView
+            android:id="@+id/tv_police_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已确认"
+            android:textColor="@color/color_ff0000"
+            android:textSize="@dimen/textSize15"/>
+
+    </LinearLayout>
+</LinearLayout>

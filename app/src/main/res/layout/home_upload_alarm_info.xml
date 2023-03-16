@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/corner_rec_white"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size48"
+        android:gravity="center"
+        android:text="报警"
+        android:textColor="@color/color_ed4132"
+        android:textSize="@dimen/textSize16"/>
+
+    <View style="@style/commenView"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/size9"
+                android:text="车主姓名:张某某"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/size12"/>
+
+            <TextView
+                android:id="@+id/tv_phone_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/size9"
+                android:text="手机号:186****3344"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/size12"/>
+
+            <TextView
+                android:id="@+id/tv_id_card_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/size9"
+                android:text="身份证号:186****3344"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/size12"/>
+
+            <TextView
+                android:id="@+id/tv_car_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/size14"
+                android:text="车辆型号: 打家劫舍覅"
+                android:textColor="@color/color_ed4132"
+                android:textSize="@dimen/size13"/>
+
+            <TextView
+                android:id="@+id/tv_car_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/size9"
+                android:text="车牌号: 粤0235"
+                android:textColor="@color/color_ed4132"
+                android:textSize="@dimen/size13"/>
+
+            <ImageView
+                android:id="@+id/iv_car_pic"
+                android:layout_width="@dimen/size120"
+                android:layout_height="@dimen/size120"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/size9"
+                android:scaleType="fitXY"
+                android:src="@drawable/bike_pic_default"/>
+
+            <EditText
+                android:id="@+id/et_car_desc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size50"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_marginTop="@dimen/size14"
+                android:background="@drawable/corner_rec_gray_line"
+                android:hint="我的车被盗了,请求支援!"
+                android:paddingLeft="@dimen/size10"
+                android:paddingRight="@dimen/size10"
+                android:textColor="@color/color_404040"
+                android:textColorHint="@color/color_b3b3b3"
+                android:textSize="@dimen/textSize11"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_marginRight="@dimen/size15"
+                android:layout_marginTop="@dimen/size9"
+                android:gravity="center"
+                android:text="*请确认本人信息,并确定报警信息真实,如有不实将负相关法律责任"
+                android:textColor="@color/color_ed4132"
+                android:textSize="@dimen/textSize11"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size48"
+        android:layout_marginTop="@dimen/size18"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_666666"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize16"/>
+
+        <TextView
+            android:id="@+id/tv_sure_alerm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_ed4132"
+            android:gravity="center"
+            android:text="确认报警"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize16"/>
+    </LinearLayout>
+</LinearLayout>

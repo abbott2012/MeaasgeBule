@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_dcdfe6"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size130"
+        android:background="@color/color_2b2b2b">
+
+        <include layout="@layout/select_service_item"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/card_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size26"
+        android:layout_marginLeft="@dimen/size10"
+        android:gravity="center_vertical"
+        android:text="体验卡说明"
+        android:textColor="@color/color_404040"
+        android:textSize="@dimen/textSize13"/>
+
+    <TextView
+        android:id="@+id/tv_card_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/size18"
+        android:paddingLeft="@dimen/size10"
+        android:paddingRight="@dimen/size10"
+        android:paddingTop="@dimen/size18"
+        android:text=""
+        android:textColor="@color/color_404040"
+        android:textSize="@dimen/textSize12"/>
+
+    <LinearLayout
+        android:id="@+id/ll_remain_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size54"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/size14"
+            android:layout_height="@dimen/size14"
+            android:layout_marginLeft="@dimen/size10"
+            android:src="@drawable/back_count"/>
+
+        <TextView
+            android:id="@+id/tv_to_out_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.7dp"
+            android:text="服务剩余3天,建议立即升级为安心卡"
+            android:textColor="@color/color_ed5132"
+            android:textSize="@dimen/textSize14"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size44"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_marginRight="@dimen/size10"
+        android:layout_marginTop="@dimen/size14"
+        android:background="@drawable/corner_recs_blue"
+        android:gravity="center"
+        android:text="升级为安心卡"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+</LinearLayout>

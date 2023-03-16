@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#dcdfe6"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_chang_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="修改密码"
+                    android:textColor="@color/color_595959"
+                    android:textSize="@dimen/textSize16"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/read_more"/>
+
+            </LinearLayout>
+            <View style="@style/commenView"/>
+
+            <LinearLayout
+                android:id="@+id/ll_check_version"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="版本更新"
+                    android:textColor="@color/color_595959"
+                    android:textSize="@dimen/textSize16"/>
+
+                <TextView
+                    android:id="@+id/tv_cur_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size10"
+                    android:text="1.0.0"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/textSize13"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/read_more"/>
+
+            </LinearLayout>
+
+            <View style="@style/commenView"/>
+
+            <LinearLayout
+                android:id="@+id/ll_no_wifi_map"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="离线地图下载"
+                    android:textColor="@color/color_595959"
+                    android:textSize="@dimen/textSize16"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/read_more"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/out_login"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="退出登录"
+                android:textColor="@color/color_ff0000"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

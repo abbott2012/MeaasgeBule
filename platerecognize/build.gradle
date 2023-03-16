@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+
+    sourceSets.main {
+        jni.srcDirs = [] // This prevents the auto generation of Android.mk
+        jniLibs.srcDir 'src/main/libs'
+        // This is not necessary unless you have precompiled libraries in your project.
+    }
+
+    task buildNative(type: Exec, description: 'Compile JNI source via NDK') {
+        println('compiling jni code with ndk-build...')
+        def ndkDir = android.ndkDirectory
+//        def ndkDir = "C:\\AndroidSdk\\ndk-bundle"
+        commandLine "$ndkDir/ndk-build",
+                '-C', file('src/main/jni').absolutePath
+        // Additional ndk-build arguments, such as NDK_DEBUG, can be provided here
+    }
+    task cleanNative(type: Exec, description: 'Clean JNI object files') {
+        def ndkDir = android.ndkDirectory
+//        def ndkDir = "C:\\AndroidSdk\\ndk-bundle"
+        commandLine "$ndkDir/ndk-build",
+                '-C', file('src/main/jni').absolutePath,
+                'clean'
+    }
+
+    clean.dependsOn 'cleanNative'
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn buildNative
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile deps.junit
+    compile deps.appcompatv7
+}

@@ -1,0 +1,156 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    //打包忽略掉第三方jar相同的文件
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+    }
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true
+        flavorDimensions rootProject.ext.versionName
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+    }
+
+    //忽略lint错误
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        htmlReport true
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    signingConfigs {
+        release {
+            keyAlias = 'cocobee'
+            keyPassword 'hong123456'
+            storeFile file('../cocobee.jks')
+            storePassword 'hong123456'
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false  //保留多余的资源文件
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+
+
+    //自定义输出APK文件名
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = rootProject.getName() + '_v' + variant.versionName + '_' + variant.buildType.name
+            outputFileName += '.apk'
+        }
+    }
+}
+
+
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+
+}
+
+
+dependencies {
+    implementation  fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs\\android_auth.jar')
+    implementation files('libs\\BaiduLBS_Android.jar')
+    implementation files('libs\\BaiduTraceSDK_v3_0_1.jar')
+    implementation files('libs\\bcprov-ext-jdk15-146.jar')
+    implementation files('libs\\bos-android-sdk-1.0.2.jar')
+    implementation files('libs\\idcard_sdk.jar')
+    implementation files('libs\\jcore-android_v1.1.0.jar')
+    implementation files('libs\\jpush-android_v3.0.1.jar')
+    implementation files('libs\\jxl.jar')
+    implementation files('libs\\ksoap2-android-assembly-2.4-jar-with-dependencies')
+    implementation files('libs\\pki.jar')
+    implementation files('libs\\poi-3.12-android-a.jar')
+    implementation files('libs\\poi-ooxml-schemas-3.12-20150511-a.jar')
+    implementation files('libs\\sun.misc.BASE64Decoder.jar')
+    implementation files('libs\\wftsdk5.0.jar')
+    implementation files('libs\\ymreg.jar')
+    implementation files('libs\\zxing.jar')
+
+    testImplementation deps.junit
+    implementation deps.supportv4
+    implementation deps.appcompatv7
+    implementation deps.design
+    implementation deps.roundimageview
+    implementation deps.TimePickerDialog
+    implementation deps.crashreport
+    implementation deps.PhotoView
+    implementation deps.okgo
+    implementation deps.okrx
+    implementation deps.okserver
+    implementation deps.butterknife
+    implementation deps.compiler
+    implementation deps.glide
+    implementation deps.transformations
+    implementation deps.rollviewpager
+    implementation deps.opensdk
+    implementation deps.recyclerview
+    implementation deps.eventbus
+    implementation deps.gson
+    implementation deps.multidex
+    implementation deps.banner
+    implementation deps.integration
+    implementation deps.okhttp
+    implementation deps.actionsheet
+
+    implementation project(':library')
+    implementation project(':randomtextview')
+    implementation project(path: ':RoundView_Lib')
+    implementation project(path: ':ConvenientLog_Lib')
+    implementation project(path: ':Utils_Lib')
+    implementation project(path: ':TabLayout_Lib')
+    implementation project(path: ':PullToRefreshAndLoadMore_Lib')
+    implementation project(path: ':StateTypeLayout_Lib')
+    implementation project(path: ':BaseAdapter_Lib')
+    implementation project(path: ':slidingmenu_library')
+    implementation project(path: ':galleryfinal')
+    implementation 'me.yokeyword:fragmentation:0.10.3'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+
+}

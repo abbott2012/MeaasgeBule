@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_dcdfe6"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ll_back_pro"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="购买保险"
+            android:textColor="@color/color_404040"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <View style="@style/commenView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/size20"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10"
+            android:paddingTop="@dimen/size20">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="电动车智能防盗险"
+                android:textColor="@color/color_3270ed"
+                android:textSize="@dimen/textSize18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                android:lineSpacingExtra="@dimen/size8"
+                android:text="电动车智能防盗险由华士精成科技有限公司向都邦财产保险股份有限公司投保了电子防盗标签的产品责任险，
+具体保险保障范围以及赔偿详情请点击以下条款查看详细"
+                android:textColor="@color/color_595959"
+                android:textSize="@dimen/size13"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_police_label"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="@dimen/size16"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10">
+
+            <TextView
+                android:id="@+id/tv_time_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="¥ 50  --  1年"
+                android:textColor="@color/color_ff7f00"
+                android:textSize="@dimen/textSize18"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/read_more"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="@dimen/size10"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="最高保额"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/textSize12"/>
+
+            <TextView
+                android:id="@+id/tv_max_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1200元"
+                android:visibility="gone"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/textSize15"/>
+        </LinearLayout>
+
+        <View style="@style/commenView"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="保障期限"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/textSize12"/>
+
+            <TextView
+                android:id="@+id/tv_police_life"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1年"
+                android:visibility="gone"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/textSize15"/>
+        </LinearLayout>
+
+        <View style="@style/commenView"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="生效日期"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/textSize12"/>
+
+            <TextView
+                android:id="@+id/tv_buy_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017-4-25"
+                android:visibility="gone"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/textSize15"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="@dimen/size10"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="投保车辆牌号"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/textSize12"/>
+
+            <TextView
+                android:id="@+id/tv_car_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="河源22342"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/textSize15"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/size16"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/check_box"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:button="@null"
+                android:background="@drawable/box_unchecked"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/color_404040"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/user_xieyi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size8"
+                android:text="我已充分了解该保险产品,已阅读并同意《电动车智能防盗险条款》内的所有内容"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/textSize12"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_to_buy_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size10"
+                android:text="¥ 50.00"
+                android:visibility="invisible"
+                android:textColor="@color/color_ff7f00"
+                android:textSize="@dimen/textSize20"/>
+
+            <TextView
+                android:id="@+id/tv_buy"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_3270ed"
+                android:gravity="center"
+                android:text="我要投保"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize18"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

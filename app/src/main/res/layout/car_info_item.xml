@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/car_info_item"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginLeft="@dimen/size10"
+    android:layout_marginRight="@dimen/size10"
+    android:layout_marginTop="@dimen/size10"
+    android:background="@drawable/corner_rec_yellow"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_car_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/size10"
+        android:text="粤A123456"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size10"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_marginRight="@dimen/size10">
+
+            <TextView
+                android:id="@+id/tv_bind_biaoqian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size12"
+                android:text="未绑定标签"
+                android:textColor="@color/color_595959"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_buy_pol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/size12"
+                android:layout_marginTop="@dimen/size10"
+                android:text="未购买保险"
+                android:textColor="@color/color_595959"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bind_biaoqian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size16"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/size5"
+                android:src="@drawable/quick_tie" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size6"
+                android:text="标签绑定"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_buy_baoxian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size20"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/size5"
+                android:src="@drawable/quick_buy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size6"
+                android:text="购买保险"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

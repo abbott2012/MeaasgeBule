@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_dcdfe6"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ll_back_pro"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="车辆详细信息"
+            android:textColor="@color/color_404040"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <View style="@style/commenView"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/textSize16"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size12"
+                    android:text="车牌号:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_car_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size20"
+                    android:text="粤A123456"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/textSize16"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size12"
+                    android:text="标签号:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_biao_qian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size20"
+                    android:text="粤A123456"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/textSize16"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size12"
+                    android:text="车架号:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_che_jia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size20"
+                    android:text="粤A123456"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/textSize16"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size12"
+                    android:text="购买价格:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_buy_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size20"
+                    android:text="1200"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/textSize16"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size12"
+                    android:text="购买时间:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_buy_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size20"
+                    android:text="2007-01-01"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/textSize16"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size12"
+                    android:text="品牌型号:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size20"
+                    android:text="卡夫"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/textSize16"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size12"
+                    android:text="发动机号:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_fadongji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size20"
+                    android:text="啊大富科技"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="@dimen/textSize16"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size12"
+                    android:text="保单号:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_baodan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size20"
+                    android:text="粤A123456"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/textSize12"
+                    android:text="车辆图片"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:id="@+id/center_pic_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/plate_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bike_front"/>
+
+
+                    <ImageView
+                        android:id="@+id/vehicle_front_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="@dimen/size10"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bike_back"/>
+
+
+                </LinearLayout>
+
+                <View
+                    style="@style/commenView"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:id="@+id/vehicle_side_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/vehicle_side_one_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bike_sidef"/>
+
+
+                    <ImageView
+                        android:id="@+id/vehicle_side_two_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="@dimen/size10"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bike_sides"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

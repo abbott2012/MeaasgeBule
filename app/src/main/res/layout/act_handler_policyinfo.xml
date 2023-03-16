@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_titlebar">
+
+        <ImageButton
+            android:id="@+id/back_ib"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="保单录入"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+
+        <Button
+            android:id="@+id/upload_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ic_upload"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+
+    <com.guoji.mobile.cocobee.view.CustomScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/layout_top"
+        android:background="@color/gainsboro">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="车辆牌号：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/grade_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <requestFocus />
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="凭证流水号：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+                    <!--标签ID-->
+                    <EditText
+                        android:id="@+id/policy_id_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/scan_barcode_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:text="扫一扫"
+                        android:textColor="@color/dodgerblue"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="电子标签号：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/tag_id_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="车主姓名：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/car_hostname_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="车主手机号：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/phone_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="车主身份证号：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/idcard_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="车辆型号：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/model_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="电机号或发动机号：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/motor_num_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="车价档次：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/price_level_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="保单生效时间：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/policy_starttime_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="承保区域范围：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/area_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="每次最高赔偿限额：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/damages_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/width_130"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="防盗标签服务费：" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/service_charge_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </com.guoji.mobile.cocobee.view.CustomScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/lv_item_selector"
+        android:descendantFocusability="blocksDescendants"
+        >
+
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="5dp"
+        android:text="车主姓名"
+        android:textColor="@android:color/black"
+         />
+
+
+
+
+
+    <TextView
+        android:id="@+id/idcard_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name_tv"
+        android:layout_below="@id/name_tv"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="6dp"
+        android:textColor="@android:color/black"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:text="身份证号" />
+
+
+
+        <TextView
+            android:id="@+id/cno_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/name_tv"
+            android:layout_below="@id/idcard_tv"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="6dp"
+            android:textColor="@android:color/black"
+            android:singleLine="true"
+            android:text="车牌号：" />
+
+
+
+    <TextView
+        android:id="@+id/phone_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/idcard_tv"
+        android:layout_below="@id/cno_tv"
+        android:layout_marginTop="2dp"
+        android:text="车主电话："
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        />
+
+
+    <TextView
+        android:id="@+id/policy_order_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/phone_tv"
+        android:layout_below="@id/phone_tv"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="2dp"
+        android:text="采集器序列号："
+        android:gravity="center"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/policy_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/policy_order_tv"
+        android:layout_marginTop="2dp"
+        android:layout_alignLeft="@id/policy_order_tv"
+        android:text="2011-11-11 08:08:08"
+        android:textColor="@android:color/black"
+        />
+
+    <TextView
+        android:id="@+id/start_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="报警时间"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/policy_price_tv"
+        android:layout_alignLeft="@id/policy_price_tv"
+        android:textColor="@android:color/black"
+        />
+
+
+    <!--备注信息-->
+    <TextView
+        android:id="@+id/alarm_status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/name_tv"
+        android:text="状态"/>
+
+
+        </RelativeLayout>
+
+</RelativeLayout>

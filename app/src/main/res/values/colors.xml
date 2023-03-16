@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="snow">#fffafa</color>
+    <color name="lavender">#e6e6fa</color>
+    <color name="gainsboro">#eeeeec</color>
+    <color name="peru">#cd853f</color>
+    <color name="darkseagreen">#8fbc8f</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="olive">#e1e1e1</color>
+    <color name="slategray">#708090</color>
+    <color name="cadetblue">#393a3e</color>
+    <color name="dodgerblue">#E80807</color>
+    <color name="deepskyblue">#00bfff</color>
+    <color name="blue">#0000ff</color>
+    <color name="black">#000000</color>
+    <color name="grey_two">#74797f</color>
+
+    <!-- 二维码扫描 -->
+    <!-- Android standard ICS color -->
+    <color name="result_view">#b0000000</color>
+    <color name="transparent">#00000000</color>
+
+
+
+    <color name="scan_bg">#7f000000</color>
+
+
+    <!--车牌识别所用到的颜色码-->
+    <color name="use">#cccccc</color> <!-- 浅灰 -->
+    <color name="qquse">#9c9c9c</color> <!-- 浅浅灰 -->
+    <color name="finder_1">#33b5e5</color> <!-- 浅蓝色 -->
+    <color name="switch_position_bg">#221715</color>
+    <color name="qgreen">#9dc446</color> <!-- 浅绿色 -->
+    <color name="color_22eaf0f5">#22eaf0f5</color>
+
+
+    <color name="color_3270ed">#E80807</color>
+    <color name="color_70ffffff">#70ffffff</color>
+    <color name="color_f0f0f0">#f0f0f0</color>
+    <color name="color_f6f6f6">#f6f6f6</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_dcdfe6">#dcdfe6</color>
+    <color name="color_404040">#404040</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_ff0000">#ff0000</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_595959">#595959</color>
+    <color name="color_ed8a32">#ed8a32</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_FFFFFF">#ffffff</color>
+    <color name="color_ac60dd">#ac60dd</color>
+    <color name="color_c17aef">#c17aef</color>
+    <color name="color_ff7f00">#ff7f00</color>
+    <color name="color_f91c4c">#f91c4c</color>
+    <color name="royalblue">#E80807</color>
+
+    <color name="gainsboro1">#ebe9dc</color>
+    <color name="color_831C70">#831C70</color>
+    <color name="color_2b2b2b">#2b2b2b</color>
+    <color name="color_ff5500">#ff5500</color>
+    <color name="color_11000000">#11000000</color>
+    <color name="color_55ffffff">#11ffffff</color>
+    <color name="color_b3b3b3">#b3b3b3</color>
+    <color name="color_ed5132">#ed5132</color>
+    <color name="color_ed4b32">#ed4b32</color>
+    <color name="color_ed4132">#ed4132</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_025602">#025602</color>
+
+</resources>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_dcdfe6"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size130"
+        android:background="@color/color_2b2b2b">
+
+        <include layout="@layout/select_service_item"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/card_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size26"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginTop="@dimen/size12"
+                android:gravity="center_vertical"
+                android:text="体验卡说明"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/textSize13"/>
+
+            <LinearLayout
+                android:id="@+id/ll_police_label"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size10"
+                android:paddingRight="@dimen/size10">
+
+                <TextView
+                    android:id="@+id/tv_time_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="¥ 40 / 一年"
+                    android:textColor="@color/color_3270ed"
+                    android:textSize="@dimen/textSize15"
+                    android:visibility="invisible"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/read_more"/>
+
+            </LinearLayout>
+
+            <View style="@style/commenView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size10"
+                android:paddingRight="@dimen/size10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="最高保额"
+                    android:textColor="@color/color_404040"
+                    android:textSize="@dimen/textSize13"/>
+
+                <TextView
+                    android:id="@+id/tv_max_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1200元"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/textSize13"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View style="@style/commenView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size10"
+                android:paddingRight="@dimen/size10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="有效期"
+                    android:textColor="@color/color_404040"
+                    android:textSize="@dimen/textSize12"/>
+
+                <TextView
+                    android:id="@+id/tv_police_life"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1年"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/textSize15"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View style="@style/commenView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size10"
+                android:paddingRight="@dimen/size10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="生效日期"
+                    android:textColor="@color/color_404040"
+                    android:textSize="@dimen/textSize12"/>
+
+                <TextView
+                    android:id="@+id/tv_buy_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2017-4-25"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/textSize15"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/size16"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/check_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text=""
+                    android:textColor="@color/color_404040"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/user_xieyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size8"
+                    android:text="我已阅读并同意《电动车智能防盗险条款》的所有内容"
+                    android:textColor="@color/color_404040"
+                    android:textSize="@dimen/textSize12"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size46"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_pay_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize14"/>
+
+            <TextView
+                android:id="@+id/tv_pay_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size5"
+                android:text="40"
+                android:textColor="@color/color_ff5500"
+                android:textSize="@dimen/size22"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_goto_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/color_3270ed"
+            android:gravity="center"
+            android:text="立即支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize20"/>
+    </LinearLayout>
+
+</LinearLayout>

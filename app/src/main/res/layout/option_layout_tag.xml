@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/option4_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cadetblue"
+                android:padding="@dimen/size20">
+
+
+    <TextView
+        android:id="@+id/option4_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size45"
+        android:gravity="center"
+        android:text="查车-发卡"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#dcdfe6"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size144"
+                android:background="@drawable/feadback_banner"/>
+
+            <View style="@style/commenView"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginTop="@dimen/size17"
+                android:text="监护对象"
+                android:textColor="@color/color_404040"
+                android:textSize="@dimen/textSize13"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_marginTop="@dimen/size6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_type_exc"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/size24"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner_rec_blue_btn"
+                    android:gravity="center"
+                    android:text="功能异常"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize14"/>
+
+                <TextView
+                    android:id="@+id/tv_type_tiyan"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/size24"
+                    android:layout_marginLeft="@dimen/size4"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner_rec_gray_btn"
+                    android:gravity="center"
+                    android:text="体验问题"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/textSize14"/>
+
+                <TextView
+                    android:id="@+id/tv_type_sug"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/size24"
+                    android:layout_marginLeft="@dimen/size4"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner_rec_gray_btn"
+                    android:gravity="center"
+                    android:text="功能建议"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/textSize14"/>
+
+                <TextView
+                    android:id="@+id/tv_type_other"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/size24"
+                    android:layout_marginLeft="@dimen/size4"
+                    android:layout_weight="1"
+                    android:background="@drawable/corner_rec_gray_btn"
+                    android:gravity="center"
+                    android:text="其他"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/textSize14"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size144"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_marginTop="@dimen/size10">
+
+                <EditText
+                    android:id="@+id/et_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/corner_rec_gray_btn"
+                    android:gravity="top"
+                    android:hint="选择问题类型后详细描述问题,帮助我们尽快处理您的反馈."
+                    android:maxLength="500"
+                    android:padding="@dimen/size10"
+                    android:textColor="@color/color_000000"
+                    android:textColorHint="@color/color_b3b3b3"
+                    android:textSize="@dimen/textSize11"/>
+
+                <TextView
+                    android:id="@+id/tv_text_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/size10"
+                    android:layout_marginRight="@dimen/size10"
+                    android:text="0/500"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size80"
+                android:layout_marginBottom="@dimen/size10"
+                android:layout_marginLeft="@dimen/size6"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_marginTop="@dimen/size10"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <ImageView
+                    android:id="@+id/iv_add_pic"
+                    android:layout_width="@dimen/size80"
+                    android:layout_height="@dimen/size80"
+                    android:layout_marginLeft="@dimen/size4"
+                    android:scaleType="center"
+                    android:src="@drawable/add_pic"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:background="@drawable/btn_style_blue_all_selector"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize20"/>
+</LinearLayout>

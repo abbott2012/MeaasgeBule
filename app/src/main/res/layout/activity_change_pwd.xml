@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_dcdfe6"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/size15"
+        android:orientation="horizontal"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="登录密码"
+            android:textColor="@color/color_404040"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/tv_car_num"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="6到18位英文字母或数字"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textColorHint="@color/color_cccccc"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/delete_all"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/confirm_error"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/size10"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="再次输入"
+            android:textColor="@color/color_404040"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/vi_num"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:textColorHint="@color/color_cccccc"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/delete_check"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/confirm_correct"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/two_pwd_not_same"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="两次输入的密码不相同"
+        android:textColor="@color/color_ff0000"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/reg_next"
+        style="@style/commenBtn"
+        android:layout_marginTop="50dp"
+        android:text="确定" />
+
+
+</LinearLayout>

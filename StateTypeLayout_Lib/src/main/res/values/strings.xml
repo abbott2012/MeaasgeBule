@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">StateTypeLayout</string>
+
+
+    <string name="loadingContentPlaceholder">努力加载中&#8230;</string>
+
+    <string name="emptyTitlePlaceholder">没有任何内容</string>
+    <string name="emptyContentPlaceholder">哎呀，没找到相关内容，试试其他的吧</string>
+
+    <string name="errorButtonPlaceHolder">戳我重试</string>
+    <string name="emptyButtonPlaceHolder">戳我刷新</string>
+    <string name="errorButtonLeftPlaceHolder">刷新</string>
+    <string name="errorButtonRightPlaceHolder">设置</string>
+    <string name="errorTitlePlaceholder">网络出现问题</string>
+    <string name="errorContentPlaceholder">请检查网络连接，然后重试</string>
+
+    <string name="loading_1">努力加载中&#160;&#160;&#160;</string>
+    <string name="loading_2">努力加载中.&#160;&#160;</string>
+    <string name="loading_3">努力加载中..&#160;</string>
+    <string name="loading_4">努力加载中...</string>
+</resources>

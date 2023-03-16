@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/color_2b2b2b">
+
+    <ImageView
+        android:id="@+id/topButton"
+        android:layout_width="@dimen/size40"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@drawable/top_mine"/>
+
+    <TextView
+        android:id="@+id/topTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="平安城市"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize20"/>
+
+
+    <ImageView
+        android:id="@+id/iv_top_mes"
+        android:layout_width="@dimen/size40"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@drawable/top_message"/>
+
+    <ImageView
+        android:id="@+id/iv_top_manager"
+        android:layout_width="@dimen/size40"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/size10"
+        android:layout_toLeftOf="@id/iv_top_mes"
+        android:scaleType="center"
+        android:src="@drawable/top_manage"/>
+</RelativeLayout>

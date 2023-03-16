@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cadetblue"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:id="@+id/option1_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/option1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="锁车"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="45dp"
+        android:background="@color/result_view"
+        android:visibility="gone"></View>
+
+    <RelativeLayout
+        android:id="@+id/option2_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/option2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="锁车"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="45dp"
+        android:background="@color/result_view"></View>
+
+    <RelativeLayout
+        android:id="@+id/option3_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/option3_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="解锁"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="90dp"
+        android:background="@color/result_view"></View>
+
+    <RelativeLayout
+        android:id="@+id/option4_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="90dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/option4_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="车已找回"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

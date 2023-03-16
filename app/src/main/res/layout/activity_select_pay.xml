@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_dcdfe6"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ll_back_pro"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择支付方式"
+            android:textColor="@color/color_404040"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <View style="@style/commenView"/>
+
+    <TextView
+        android:id="@+id/tv_pay_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="¥ 50.00"
+        android:textColor="@color/color_3270ed"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tv_car_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="投保车牌号:河源12345"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/textSize12"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_car_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="保险期限:1年"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/textSize12"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_ali_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/size10"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alipay"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_weight="1"
+            android:text="支付宝支付"/>
+
+        <ImageView
+            android:id="@+id/iv_not_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/confirm_correct"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View style="@style/commenView"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_wechat_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/size10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wechat"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_weight="1"
+            android:text="微信支付"/>
+
+        <ImageView
+            android:id="@+id/iv_has_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/confirm_correct"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sure_btn"
+        style="@style/commenBtn"
+        android:text="确认支付"
+        android:layout_marginTop="80dp"/>
+</LinearLayout>

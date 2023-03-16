@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_car_person"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size92"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size14"
+        android:paddingRight="@dimen/size14">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/ll_add_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size10"
+            android:background="@color/transparent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_add_more"
+                android:layout_width="@dimen/size60"
+                android:layout_height="@dimen/size60"
+                android:src="@drawable/role_add"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size3"
+                android:text="添加标签"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/color_999999"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.TextureMapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <ImageView
+            android:id="@+id/iv_lock"
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size50"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/size40"
+            android:layout_marginLeft="@dimen/size26"
+            android:src="@drawable/btn_lock_selector"/>
+
+
+        <ImageView
+            android:id="@+id/iv_path"
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size50"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/size40"
+            android:layout_marginRight="@dimen/size26"
+            android:src="@drawable/btn_path_selector"/>
+
+        <ImageView
+            android:id="@+id/iv_alert"
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size50"
+            android:layout_above="@id/iv_path"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="@dimen/size26"
+            android:src="@drawable/btn_alert_selector"/>
+
+        <ImageView
+            android:id="@+id/iv_position"
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size50"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/size40"
+            android:layout_marginRight="@dimen/size26"
+            android:src="@drawable/btn_position_selector"/>
+
+        <View
+            android:id="@+id/view_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#60000000"/>
+
+        <LinearLayout
+            android:id="@+id/ll_first_car_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_car"
+                android:layout_width="@dimen/size100"
+                android:layout_height="@dimen/size100"
+                android:src="@drawable/guard_bike"/>
+
+            <ImageView
+                android:id="@+id/iv_person"
+                android:layout_width="@dimen/size100"
+                android:layout_height="@dimen/size100"
+                android:layout_marginLeft="@dimen/size48"
+                android:src="@drawable/guard_person"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_refresh"
+            android:layout_width="@dimen/size192"
+            android:layout_height="@dimen/size120"
+            android:layout_centerInParent="true"
+            android:background="@drawable/corner_rec_white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size16"
+                android:text="请求数据异常,点击重试!"
+                android:textColor="@color/color_ed4b32"
+                android:textSize="@dimen/textSize11"/>
+
+            <ImageView
+                android:layout_width="@dimen/size48"
+                android:layout_height="@dimen/size48"
+                android:layout_marginTop="@dimen/size18"
+                android:src="@drawable/alert_refresh"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

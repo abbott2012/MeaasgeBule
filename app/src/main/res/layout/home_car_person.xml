@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="80dp"
+              android:layout_height="92dp"
+              android:layout_marginRight="@dimen/size17"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_car_pic"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size60"
+            android:src="@drawable/role_bike_default"/>
+
+        <ImageView
+            android:id="@+id/iv_out_line"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size60"
+            android:background="@drawable/corner_out_line_blue"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_car_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size3"
+        android:maxLines="1"
+        android:text="我的爱车"
+        android:textColor="@color/color_404040"
+        android:textSize="@dimen/textSize12"/>
+</LinearLayout>

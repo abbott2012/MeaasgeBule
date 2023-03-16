@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size45"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_read"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/color_3270ed"
+            android:gravity="center"
+            android:text="读取Excel"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_out"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/color_3270ed"
+            android:gravity="center"
+            android:text="导出Excel"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

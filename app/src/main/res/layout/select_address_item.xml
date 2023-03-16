@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size10"
+        android:layout_margin="@dimen/size10"
+        android:background="@drawable/corner_rec_blue_address"
+        android:gravity="center"
+        android:text="深圳市"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

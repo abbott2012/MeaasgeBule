@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_dcdfe6"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/size24"
+                    android:paddingLeft="@dimen/size10"
+                    android:paddingTop="@dimen/size24">
+
+                    <ImageView
+                        android:id="@+id/iv_add_pic"
+                        android:layout_width="@dimen/size130"
+                        android:layout_height="180dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/person_empty"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size16"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="郭老 | 男"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <TextView
+                            android:id="@+id/tv_user_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/textSize29"
+                            android:text="学生"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <TextView
+                            android:id="@+id/tv_birth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/textSize29"
+                            android:text="2016-06-01"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <TextView
+                            android:id="@+id/tv_id_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/textSize29"
+                            android:text="123456789123456789"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/textSize15"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/commenView"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size44"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size10"
+                        android:layout_weight="1"
+                        android:text="标签号"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/textSize15"/>
+
+                    <TextView
+                        android:id="@+id/tv_label_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/size10"
+                        android:text="16F3c"
+                        android:textColor="@color/color_595959"
+                        android:textSize="@dimen/textSize15"/>
+                </LinearLayout>
+
+                <View style="@style/commenView"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_has_buy_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size44"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size10"
+                        android:layout_weight="1"
+                        android:text="已购服务"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/textSize15"/>
+
+                    <TextView
+                        android:id="@+id/tv_has_buy_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="安心卡"
+                        android:textColor="@color/color_595959"
+                        android:textSize="@dimen/textSize15"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/size14"
+                        android:layout_height="@dimen/size14"
+                        android:layout_marginRight="@dimen/size10"
+                        android:src="@drawable/read_more"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/size16"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size44"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_family_menber_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size10"
+                        android:text="监护成员"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/textSize15"/>
+                    <ImageView
+                        android:id="@+id/iv_show_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_family_menber_title"
+                        android:layout_marginLeft="@dimen/size4"
+                        android:src="@drawable/show_infor"/>
+                    <TextView
+                        android:id="@+id/tv_manager"
+                        android:layout_width="@dimen/size56"
+                        android:layout_height="@dimen/size28"
+                        android:layout_marginRight="@dimen/size10"
+                        android:background="@drawable/corner_rec_blue_line"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:text="管理"
+                        android:textColor="@color/color_3270ed"
+                        android:textSize="@dimen/textSize13"/>
+                </RelativeLayout>
+
+                <View style="@style/commenView"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size8"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_father"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size80">
+
+                        <ImageView
+                            android:id="@+id/iv_father"
+                            android:layout_width="@dimen/size60"
+                            android:layout_height="@dimen/size60"
+                            android:src="@drawable/father_default"/>
+
+                        <TextView
+                            android:id="@+id/tv_father"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_father"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size4"
+                            android:text="我"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <ImageView
+                            android:id="@+id/iv_add_father"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size40"
+                            android:layout_marginTop="@dimen/size40"
+                            android:src="@drawable/add_manager"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_mother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size80">
+
+                        <ImageView
+                            android:id="@+id/iv_mother"
+                            android:layout_width="@dimen/size60"
+                            android:layout_height="@dimen/size60"
+                            android:src="@drawable/mother_default"/>
+
+                        <TextView
+                            android:id="@+id/tv_mother"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_mother"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size4"
+                            android:text="妈妈"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <ImageView
+                            android:id="@+id/iv_add_mother"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size40"
+                            android:layout_marginTop="@dimen/size40"
+                            android:src="@drawable/add_manager"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size16"
+                    android:layout_marginTop="@dimen/size8"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_grandpa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size22">
+
+                        <ImageView
+                            android:id="@+id/iv_grandpa"
+                            android:layout_width="@dimen/size60"
+                            android:layout_height="@dimen/size60"
+                            android:src="@drawable/son_default"/>
+
+                        <TextView
+                            android:id="@+id/tv_son"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_grandpa"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size4"
+                            android:text="儿子"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <ImageView
+                            android:id="@+id/iv_add_grandpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size40"
+                            android:layout_marginTop="@dimen/size40"
+                            android:src="@drawable/add_manager"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_grandma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size27">
+
+                        <ImageView
+                            android:id="@+id/iv_grandma"
+                            android:layout_width="@dimen/size60"
+                            android:layout_height="@dimen/size60"
+                            android:src="@drawable/daughter_default"/>
+
+                        <TextView
+                            android:id="@+id/tv_daughter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_grandma"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size4"
+                            android:text="女儿"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <ImageView
+                            android:id="@+id/iv_add_grandma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size40"
+                            android:layout_marginTop="@dimen/size40"
+                            android:src="@drawable/add_manager"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_grandfather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size22">
+
+                        <ImageView
+                            android:id="@+id/iv_grandfather"
+                            android:layout_width="@dimen/size60"
+                            android:layout_height="@dimen/size60"
+                            android:src="@drawable/son_default"/>
+
+                        <TextView
+                            android:id="@+id/tv_brother"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_grandfather"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size4"
+                            android:text="兄弟"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <ImageView
+                            android:id="@+id/iv_add_grandfather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size40"
+                            android:layout_marginTop="@dimen/size40"
+                            android:src="@drawable/add_manager"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_grandmother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size22">
+
+                        <ImageView
+                            android:id="@+id/iv_grandmother"
+                            android:layout_width="@dimen/size60"
+                            android:layout_height="@dimen/size60"
+                            android:src="@drawable/daughter_default"/>
+
+                        <TextView
+                            android:id="@+id/tv_sister"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_grandmother"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size4"
+                            android:text="姐妹"
+                            android:textColor="@color/color_000000"
+                            android:textSize="@dimen/textSize15"/>
+
+                        <ImageView
+                            android:id="@+id/iv_add_grandmother"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size40"
+                            android:layout_marginTop="@dimen/size40"
+                            android:src="@drawable/add_manager"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

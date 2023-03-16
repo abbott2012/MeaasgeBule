@@ -1,0 +1,1045 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_titlebar">
+
+        <ImageButton
+            android:id="@+id/back_ib"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+        <com.guoji.mobile.cocobee.view.SwitchMultiButton
+            android:id="@+id/switchMultiButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:selectedColor="@android:color/white"
+            app:selectedTab="0"
+            app:strokeRadius="5dp"
+            app:strokeWidth="1dp"
+            app:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gainsboro"
+        android:layout_below="@+id/layout_top"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tag_person_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="标签和车主信息:"
+                android:textColor="@color/royalblue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <requestFocus />
+
+                <TextView
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/car_bind_tag_id" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+                    <!--标签ID-->
+                    <EditText
+                        android:id="@+id/tag_id_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/scan_barcode_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:text="扫一扫"
+                        android:textColor="@color/dodgerblue"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ptype_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/ptype_tip_tv"
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/ptype_tip" />
+
+
+                <EditText
+                    android:id="@+id/ptype_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:focusable="false"
+                    android:maxLength="11"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/uname_tip_tv"
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/car_host_name" />
+
+
+                <EditText
+                    android:id="@+id/uname_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:maxLength="15"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/car_host_identify" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ucardid_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:maxLength="18"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/ocr_idcard_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:text="OCR识别"
+                        android:textColor="@color/dodgerblue"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/car_host_address" />
+
+
+                <EditText
+                    android:id="@+id/gender_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:focusable="false"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/car_host_birthday" />
+
+
+                <EditText
+                    android:id="@+id/ubirthday_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:focusable="false"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/car_host_residence" />
+
+
+                <EditText
+                    android:id="@+id/uresidence_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/uphone_tip_tv"
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/car_host_phone" />
+
+
+                <EditText
+                    android:id="@+id/uphone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/car_host_policestation" />
+
+
+                <EditText
+                    android:id="@+id/upolicestation_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:focusable="false"
+                    android:hint="点击选择组织机构"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/car_host_uworkaddress" />
+
+
+                <EditText
+                    android:id="@+id/uworkaddress_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:maxLength="50"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/uurgencyname" />
+
+
+                <EditText
+                    android:id="@+id/uurgencyname_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:maxLength="15"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/uurgencyphone" />
+
+
+                <EditText
+                    android:id="@+id/uurgencyphone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:inputType="phone"
+                    android:minHeight="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/guardian_cardid_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/car_info_tip_layout_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/guardian_identify" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/guardian_cardid_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:maxLength="18"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/ocr_guardian_idcard_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:text="OCR识别"
+                        android:textColor="@color/dodgerblue"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/car_info_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="车辆信息:"
+                    android:textColor="@color/royalblue" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/car_plate_num" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/cnumber_et"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:maxLength="18"
+                            android:paddingRight="5dp"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/ocr_cnumber_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:text="车牌识别"
+                            android:textColor="@color/dodgerblue"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                             />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="车架号：" />
+
+
+                    <EditText
+                        android:id="@+id/cframe_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:maxLength="30"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="购买价格：" />
+
+
+                    <EditText
+                        android:id="@+id/cprice_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/car_buytime" />
+
+
+                    <EditText
+                        android:id="@+id/cbuytime_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:focusable="false"
+                        android:maxLength="20"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="品牌型号：" />
+
+
+                    <EditText
+                        android:id="@+id/ctype_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:maxLength="30"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="发动机号：" />
+
+
+                    <EditText
+                        android:id="@+id/cdynamo_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:maxLength="30"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="备注：" />
+
+
+                    <EditText
+                        android:id="@+id/remark_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:maxLength="500"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--保单信息-->
+
+            <LinearLayout
+                android:id="@+id/policy_info_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="保单信息:"
+                    android:textColor="@color/royalblue" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="保单号：" />
+
+
+                    <EditText
+                        android:id="@+id/policy_num_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:maxLength="30"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="保单价格：" />
+
+
+                    <EditText
+                        android:id="@+id/policy_price_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:maxLength="30"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="开始时间：" />
+
+
+                    <EditText
+                        android:id="@+id/policy_starttime_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/car_info_tip_layout_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="结束时间：" />
+
+
+                    <EditText
+                        android:id="@+id/policy_endtime_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_bg_style"
+                        android:focusable="false"
+                        android:maxLength="20"
+                        android:minHeight="40dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/isgrabsafe_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已购买抢盗险" />
+
+
+                    <CheckBox
+                        android:id="@+id/isthirdsafe_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已购买第三方责任" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="现场照片留存:"
+                android:textColor="@color/royalblue" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/ucardid_iv_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身份证正面：" />
+
+                    <ImageView
+                        android:id="@+id/ucardid_iv"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_below="@id/ucardid_iv_tip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/post_add_pic" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/ucardid_opposite_iv_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身份证反面：" />
+
+                    <ImageView
+                        android:id="@+id/ucardid_opposite_iv"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_below="@id/ucardid_opposite_iv_tip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/post_add_pic" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/center_pic_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/plate_iv_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车辆正面照片：" />
+
+                    <ImageView
+                        android:id="@+id/plate_iv"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_below="@id/plate_iv_tip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/post_add_pic" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/vehicle_front_iv_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车辆侧面照：" />
+
+                    <ImageView
+                        android:id="@+id/vehicle_front_iv"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_below="@id/vehicle_front_iv_tip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/post_add_pic" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/vehicle_side_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/vehicle_side_one_iv_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车牌照片：" />
+
+                    <ImageView
+                        android:id="@+id/vehicle_side_one_iv"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_below="@id/vehicle_side_one_iv_tip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/post_add_pic" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/vehicle_side_two_iv_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车辆保单照：" />
+
+                    <ImageView
+                        android:id="@+id/vehicle_side_two_iv"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_below="@id/vehicle_side_two_iv_tip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/post_add_pic" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/input_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tab_bg"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/upload_btn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="上传数据"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

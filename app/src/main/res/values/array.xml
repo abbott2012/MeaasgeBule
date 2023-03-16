@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="camera_setting_item">
+        <!--  <item>@string/camera_setting_language</item> -->
+        <!--  <item>@string/camera_setting_viewfinder</item>-->
+        <!--   <item>@string/camera_setting_blur</item> -->
+        <item>@string/camera_setting_focus</item>
+    </string-array>
+
+    <string-array name="main_items">
+        <item>@string/main_home</item>
+        <!--<item>@string/main_me</item>-->
+    </string-array>
+
+    <string-array name="main_manager_items">
+        <item>@string/main_home</item>
+        <item>@string/main_setting</item>
+        <item>@string/main_me</item>
+    </string-array>
+
+
+    <string-array name="main_icon_normal_res_ids">
+        <item>@drawable/query_g</item>
+        <!--<item>@drawable/mine_g</item>-->
+    </string-array>
+
+    <string-array name="main_icon_manager_normal_res_ids">
+        <item>@drawable/query_g</item>
+        <item>@drawable/management_g</item>
+        <item>@drawable/mine_g</item>
+    </string-array>
+
+    <string-array name="main_icon_manager_selected_res_ids">
+        <item>@drawable/query_b</item>
+        <item>@drawable/management_b</item>
+        <item>@drawable/mine_b</item>
+    </string-array>
+
+    <string-array name="main_icon_selected_res_ids">
+        <item>@drawable/query_b</item>
+        <!--<item>@drawable/mine_b</item>-->
+    </string-array>
+
+   <!-- &lt;!&ndash;人员类型&ndash;&gt;
+    <string-array name="user_type">
+        <item>车主</item>
+        <item>患者</item>
+        <item>老人</item>
+        <item>学生</item>
+        <item>易走失人员</item>
+        <item>警务人员</item>
+        <item>保安人员</item>
+        <item>协警人员</item>
+    </string-array>-->
+
+    <!--人员类型-->
+    <string-array name="user_type">
+        <item>车主</item>
+    </string-array>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/size10"
+    android:layout_marginTop="@dimen/size10">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/lv_item_selector"
+        android:descendantFocusability="blocksDescendants">
+
+        <TextView
+            android:id="@+id/recogcode_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="6dp"
+            android:text="110快速识别编码："
+            android:textColor="@color/grey_two"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/type_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/recogcode_tv"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/charge"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/coordinates_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/recogcode_tv"
+            android:layout_below="@id/recogcode_tv"
+            android:layout_marginTop="5dp"
+            android:text="（0，0）："
+            android:textColor="@color/grey_two"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/install_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/coordinates_tv"
+            android:layout_below="@id/coordinates_tv"
+            android:layout_marginTop="5dp"
+            android:text="安装状态："
+            android:textColor="@color/grey_two"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/online_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/coordinates_tv"
+            android:layout_below="@id/install_status_tv"
+            android:layout_marginTop="5dp"
+            android:text="在线状态："
+            android:textColor="@color/grey_two"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/coordinates_tv"
+            android:layout_below="@id/online_status_tv"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="地址："
+            android:textColor="@color/grey_two"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>

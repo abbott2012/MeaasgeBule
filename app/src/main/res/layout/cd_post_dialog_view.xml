@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:id="@+id/recogcode_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="24dp"
+        android:text="识别码：" />
+
+    <EditText
+        android:id="@+id/recogcode_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="110快速识别码，长度1~16个字符"
+        android:maxLength="16"
+        android:textSize="15sp"
+        android:background="@null"
+        android:layout_alignBaseline="@id/recogcode_tv"
+        android:layout_toRightOf="@id/recogcode_tv" />
+
+
+
+    <TextView
+        android:id="@+id/police_station_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/recogcode_tv"
+        android:layout_below="@id/recogcode_tv"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="24dp"
+        android:visibility="gone"
+        android:text="机构：" />
+
+    <EditText
+        android:id="@+id/police_station_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="点击选择组织机构"
+        android:focusable="false"
+        android:maxLength="20"
+        android:textSize="15sp"
+        android:background="@null"
+        android:visibility="gone"
+        android:layout_alignBaseline="@id/police_station_tv"
+        android:layout_toRightOf="@id/police_station_tv" />
+
+
+
+    <TextView
+        android:id="@+id/coordinates_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/recogcode_tv"
+        android:layout_below="@id/police_station_tv"
+        android:layout_marginTop="25dp"
+        android:text="经纬度：" />
+
+    <EditText
+        android:id="@+id/coordinates_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请填写经纬度"
+        android:textSize="15sp"
+        android:background="@null"
+        android:layout_alignBaseline="@id/coordinates_tv"
+        android:layout_toRightOf="@id/coordinates_tv" />
+
+
+    <TextView
+        android:id="@+id/address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_alignRight="@id/recogcode_tv"
+        android:layout_below="@id/coordinates_tv"
+        android:text="地址："
+        />
+
+    <EditText
+        android:id="@+id/address_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:maxLength="60"
+        android:hint="请填写地址"
+        android:background="@null"
+        android:layout_below="@id/coordinates_et"
+        android:layout_alignTop="@id/address_tv"
+        android:layout_toRightOf="@id/address_tv"
+        android:text="3" />
+
+
+
+</RelativeLayout>

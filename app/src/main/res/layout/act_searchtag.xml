@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_titlebar">
+
+        <ImageButton
+            android:id="@+id/back_ib"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/tags_search"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+
+        <Button
+            android:id="@+id/setting_btn"
+            android:layout_width="26dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/setting01" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/scan_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top"
+        android:background="#1d2122">
+
+        <TextView
+            android:id="@+id/status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="状态："
+            android:textColor="@android:color/white" />
+
+
+        <Button
+            android:id="@+id/beep_btn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/status_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/speakdisable" />
+
+
+        <Button
+            android:id="@+id/control_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/beep_btn"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/beep_btn"
+            android:background="@drawable/ic_start_scan" />
+
+
+        <TextView
+            android:id="@+id/module_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/beep_btn"
+            android:layout_centerHorizontal="true"
+            android:text="@string/patrol_search"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tag_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/module_tip_tv"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <FrameLayout
+            android:id="@+id/scan_fl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/beep_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp">
+
+            <com.guo.duoduo.library.RadarScanView
+                android:id="@+id/scanView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/compass" />
+
+            <com.guo.duoduo.randomtextview.RandomTextView
+                android:id="@+id/random_textview"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_below="@id/status_tv"
+                android:layout_marginTop="10dp"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size44"
+        android:layout_below="@id/scan_rl"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size20"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="开始读卡"
+            android:textColor="@android:color/holo_green_light" />
+
+        <TextView
+            android:id="@+id/tv_stop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size20"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="停止读卡"
+            android:textColor="@android:color/holo_green_light" />
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size20"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="设置一档"
+            android:textColor="@android:color/holo_green_light" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/size20"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="设置二挡"
+            android:textColor="@android:color/holo_green_light" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_btn"
+        android:background="#1d2122" />
+
+
+</RelativeLayout>

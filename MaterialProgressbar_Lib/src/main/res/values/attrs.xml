@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaterialProgressBar">
+        <attr name="mp_bar_color" format="color"/>
+        <attr name="mp_bar_mode" format="enum">
+            <enum name="INDETERMINATE" value="0"/>
+            <enum name="DETERMINATE" value="1"/>
+        </attr>
+        <attr name="mp_bar_width" format="dimension"/>
+        <attr name="mp_bar_progress" format="float"/>
+        <attr name="mp_bar_max" format="float"/>
+        <attr name="mp_bar_speed" format="integer"/>
+        <attr name="mp_rim_width" format="dimension"/>
+        <attr name="mp_rim_color" format="color"/>
+        <attr name="mp_show_rim" format="boolean"/>
+    </declare-styleable>
+</resources>

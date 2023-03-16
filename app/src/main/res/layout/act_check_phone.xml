@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_titlebar">
+
+        <ImageButton
+            android:id="@+id/back_ib"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="忘记密码"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <Button
+            android:id="@+id/sure_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认"
+            android:textSize="15sp"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:background="@color/gainsboro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/phone_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/input_bg_style"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="手机号码"
+            android:inputType="phone"
+            android:minHeight="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:textSize="15sp"/>
+
+
+
+        <EditText
+            android:id="@+id/check_code_et"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/phone_et"
+            android:background="@drawable/input_bg_style"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="10dp"
+            android:hint="验证码"
+            android:minHeight="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:textSize="15sp"/>
+
+
+        <Button
+            android:id="@+id/get_checkcode_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"
+            android:background="@drawable/input_bg_style_two"
+            android:layout_alignBaseline="@id/check_code_et"
+            android:layout_toRightOf="@id/check_code_et"
+            android:textColor="@android:color/black"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp"
+    android:paddingLeft="8dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="linvor / 00:12:09:12:00:53"
+        android:layout_marginTop="3dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label"
+        android:textSize="14sp"
+        android:text="Click to connect"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="3dp">
+    </TextView>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyle"
+        android:id="@+id/progress"
+        android:indeterminate="true"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_below="@+id/label"
+        android:layout_alignBottom="@+id/value"
+        android:layout_toRightOf="@+id/value"
+        android:layout_toEndOf="@+id/value" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_selector"
+    android:minHeight="48dp"
+    android:paddingLeft="8dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textSize="18sp"
+        android:text="FDXB: 999 000000000001"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_tv"
+        android:textSize="14sp"
+        android:text="31/10/2015 22:33"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp">
+    </TextView>
+
+
+
+</RelativeLayout>

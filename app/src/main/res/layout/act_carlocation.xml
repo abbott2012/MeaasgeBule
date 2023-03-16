@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_titlebar" >
+
+        <ImageButton
+            android:id="@+id/back_ib"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="电动车实时位置"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+
+
+        <Button
+            android:id="@+id/setting_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            android:text="车辆状态"
+            android:background="@null"/>
+
+
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:layout_below="@id/layout_top"
+        android:id="@+id/type_rg"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        >
+
+        <RadioButton
+            android:id="@+id/pos_look_rb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="人员标签位置查询"
+            />
+
+        <RadioButton
+            android:id="@+id/gps_look_rb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="人员GPS位置查询"
+            />
+
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/username_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/type_rg"
+        android:background="@drawable/ic_search_ll_white"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/username_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入车牌号"
+            android:singleLine="true"
+            android:maxLength="30"
+            android:minHeight="40dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@drawable/bg_text"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@null"
+            />
+
+    </LinearLayout>
+
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapView"
+        android:layout_below="@id/username_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+</RelativeLayout>

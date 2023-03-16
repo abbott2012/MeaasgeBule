@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_2b2b2b"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp" 
+        android:paddingTop="10dp">
+
+       <ImageView
+           android:id="@+id/profile_image"
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           android:src="@drawable/app_logo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="28.0dip"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/profile_image"
+            android:gravity="center_vertical"
+            android:paddingLeft="15.0dip"
+            android:text="IT_xiao小巫"
+            android:textColor="@color/white"
+            android:textSize="14.0sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_home"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:clickable="true"
+        android:drawablePadding="1.0dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="10.0dip"
+        android:text="首页"
+        android:textColor="@color/white"
+        android:textSize="16.0sp" />
+
+    <View
+        style="@style/commenView"/>
+
+
+    <TextView
+         android:id="@+id/tvMySettings"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:clickable="true"
+        android:drawablePadding="1.0dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="10.0dip"
+        android:text="设置"
+        android:textColor="@color/white"
+        android:textSize="16.0sp" />
+
+	
+</LinearLayout>

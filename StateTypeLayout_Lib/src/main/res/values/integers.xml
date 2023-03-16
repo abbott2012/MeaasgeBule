@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="e_show_animation_time">@android:integer/config_shortAnimTime
+    </integer>
+    <integer name="c_show_animation_time">@android:integer/config_longAnimTime
+    </integer>
+</resources>

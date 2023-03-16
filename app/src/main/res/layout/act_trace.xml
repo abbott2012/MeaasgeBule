@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@color/gainsboro"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_titlebar">
+
+        <ImageView
+            android:id="@+id/back_ib"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/back_set" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="轨迹查看"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+
+        <Button
+            android:id="@+id/search_trace_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/search_white"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+
+  <!--  <RadioGroup
+        android:id="@+id/type_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top"
+        android:layout_marginLeft="3dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/pos_look_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="人员标签位置查询" />
+
+        <RadioButton
+            android:id="@+id/gps_look_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="人员GPS位置查询" />
+
+
+    </RadioGroup>
+-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/username_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/username_tip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="用户名："
+                android:textColor="@android:color/black" />
+
+
+            <EditText
+                android:id="@+id/username_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_bg_style"
+                android:hint="请输入用户名"
+                android:minHeight="40dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:textColor="@drawable/bg_text"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/start_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_ll"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始时间："
+                android:textColor="@android:color/black" />
+
+
+            <TextView
+                android:id="@+id/starttime_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_bg_style"
+                android:hint="点击选择开始时间"
+                android:minHeight="40dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:textColor="@drawable/bg_text"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/end_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/start_ll"
+            android:layout_below="@id/start_ll"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束时间："
+                android:textColor="@android:color/black" />
+
+
+            <TextView
+                android:id="@+id/endtime_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_bg_style"
+                android:hint="点击选择结束时间"
+                android:minHeight="40dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:textColor="@drawable/bg_text"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1">
+
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <SeekBar
+            android:id="@+id/speed_sb"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="#ff74797f"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="122dp"
+            android:progressDrawable="@drawable/player_setting_bright_progressbar"
+            android:thumb="@drawable/player_settings_bright_thumb"
+            android:visibility="gone"
+            android:max="500"/>
+
+
+        <LinearLayout
+            android:id="@+id/control_ll"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@android:color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="55dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            >
+
+
+            <ImageView
+                android:id="@+id/location_ivPlay"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@null"
+                android:src="@drawable/play1" />
+
+
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/lavender"
+                />
+
+
+            <Button
+                android:id="@+id/replay_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/replay1"
+                />
+
+
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/lavender"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="#ff74797f"
+                android:gravity="center_vertical"
+                >
+                <SeekBar
+                    android:id="@+id/progressBar1"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:progressDrawable="@drawable/player_setting_bright_progressbar"
+                    android:thumb="@drawable/player_settings_bright_thumb"
+                    android:max="100"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <Button
+                    android:id="@+id/speed_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/speed"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

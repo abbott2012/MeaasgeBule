@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/corner_rec_white"
+              android:padding="@dimen/size10"
+              android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_chang"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size44"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_marginRight="@dimen/size10"
+        android:layout_marginTop="@dimen/size15"
+        android:background="@drawable/corner_rec_blue_line"
+        android:hint="请输入关系"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/size10"
+        android:paddingRight="@dimen/size10"/>
+
+    <TextView
+        android:id="@+id/tv_sure_chang"
+        style="@style/commenBtn"
+        android:text="更换"/>
+</LinearLayout>

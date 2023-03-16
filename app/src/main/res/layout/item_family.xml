@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="72dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_ralation_pic"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size60"
+        android:layout_marginLeft="@dimen/size10"
+        android:src="@drawable/daughter_default"/>
+
+    <EditText
+        android:id="@+id/et_relation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_weight="1"
+        android:text="小姨"
+        android:background="@null"
+        android:focusable="false"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/textSize16"/>
+
+    <ImageView
+        android:id="@+id/iv_chang_role"
+        android:layout_width="@dimen/size18"
+        android:layout_height="@dimen/size18"
+        android:layout_marginRight="@dimen/size18"
+        android:src="@drawable/change_role"/>
+
+    <ImageView
+        android:id="@+id/iv_delete_role"
+        android:layout_width="@dimen/size18"
+        android:layout_height="@dimen/size18"
+        android:layout_marginRight="@dimen/size10"
+        android:src="@drawable/delete_role"/>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent" >
+    <RelativeLayout
+	    android:id="@+id/layout_top"
+	    android:layout_width="match_parent" 
+		android:layout_height="35dp"
+		android:background="@drawable/bg_titlebar" > 
+		<TextView
+		    android:id="@+id/dialog_title" 
+		    android:textSize="18sp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerInParent="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginLeft="10dp"
+		    android:textColor="@color/white"/>
+		<ProgressBar 
+		    android:id="@+id/loading"
+		    android:visibility="gone"
+		    android:layout_width="25dp"
+		    android:layout_height="25dp"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginRight="5dp"
+		    android:indeterminateDrawable="@drawable/progress_bar"/>
+	</RelativeLayout>
+    <TextView
+		android:id="@+id/title_paired_devices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/match_device"
+        android:background="@color/gainsboro"
+        android:textColor="@color/deepskyblue"
+        android:paddingLeft="5dp"/>
+    <ListView 
+        android:id="@+id/paired_devices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:stackFromBottom="true"
+        android:layout_weight="1" />
+    <TextView 
+        android:id="@+id/title_new_devices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/not_match_device"
+        android:background="@color/gainsboro"
+        android:textColor="@color/deepskyblue"
+        android:paddingLeft="5dp"/>
+    <ListView 
+        android:id="@+id/new_devices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:stackFromBottom="true"
+        android:layout_weight="2" />
+</LinearLayout>

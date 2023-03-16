@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_dcdfe6"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size130"
+        android:background="@color/color_2b2b2b">
+
+        <include layout="@layout/select_service_item"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/card_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size26"
+        android:layout_marginLeft="@dimen/size10"
+        android:gravity="center_vertical"
+        android:text="安心卡说明"
+        android:textColor="@color/color_404040"
+        android:textSize="@dimen/textSize13"/>
+
+    <TextView
+        android:id="@+id/tv_card_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/size18"
+        android:paddingLeft="@dimen/size10"
+        android:paddingRight="@dimen/size10"
+        android:paddingTop="@dimen/size18"
+        android:text="逾期未退自动帮您升级为正式版,不再缴纳任何费用,可以连续使用3年!(金额不再退还)"
+        android:textColor="@color/color_404040"
+        android:textSize="@dimen/textSize12"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size46"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize14"/>
+
+            <TextView
+                android:id="@+id/tv_pay_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size5"
+                android:text="40"
+                android:textColor="@color/color_ff5500"
+                android:textSize="@dimen/size22"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_goto_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/color_3270ed"
+            android:gravity="center"
+            android:text="立即支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize20"/>
+    </LinearLayout>
+
+</LinearLayout>

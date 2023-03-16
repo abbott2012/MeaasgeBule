@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_card_type"
+              android:layout_width="match_parent"
+              android:layout_height="110dp"
+              android:layout_marginLeft="@dimen/size10"
+              android:layout_marginRight="@dimen/size10"
+              android:layout_marginTop="@dimen/size10"
+              android:background="@drawable/card_bg_purple"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size22"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_marginRight="@dimen/size10"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize18"/>
+
+    <TextView
+        android:id="@+id/tv_card_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size22"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_marginRight="@dimen/size10"
+        android:layout_marginTop="@dimen/size12"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize12"/>
+
+</LinearLayout>

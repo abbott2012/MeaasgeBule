@@ -1,0 +1,1278 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_titlebar">
+
+        <ImageButton
+            android:id="@+id/back_ib"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/debug"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/debug_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="@string/tianxian_debug"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+    <com.guoji.mobile.cocobee.view.CustomScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/input_bottom_layout"
+        android:layout_below="@+id/layout_top"
+        android:background="@color/gainsboro"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/collector_info_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/collector_info"
+                android:textColor="@color/royalblue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+                <TextView
+                    android:layout_width="@dimen/device_tip_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/device_id" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+                    <!--设备ID-->
+                    <EditText
+                        android:id="@+id/device_id_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/device_id_hint"
+                        android:maxLength="15"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/deviceid_clear_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/a1o"
+                        android:scaleType="centerInside"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/device_tip_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/factory_num" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/device_num_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/factory_num_hint"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/read_factorynum_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@null"
+                        android:text="@string/read"
+                        android:textColor="@color/dodgerblue" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/wireless_network_params"
+                android:textColor="@color/royalblue" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/device_tip_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plat_ip_1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/device_ip_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="10.10.100.42"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/deviceip_clear_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/a1o"
+                        android:scaleType="centerInside"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+
+                <TextView
+                    android:layout_width="@dimen/device_tip_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plat_port_1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/device_port_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="4600"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/deviceport_clear_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/a1o"
+                        android:scaleType="centerInside"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="@dimen/device_tip_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/read_triad" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/mEditTriad"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size100"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="@string/reading_triple"
+                        android:textSize="15sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right">
+
+                        <TextView
+                            android:id="@+id/tvClearTriad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/size20"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:padding="@dimen/size5"
+                            android:text="@string/remove"
+                            android:textColor="@color/dodgerblue" />
+
+                        <TextView
+                            android:id="@+id/tvReadTriad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/size20"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:padding="@dimen/size5"
+                            android:text="@string/read"
+                            android:textColor="@color/dodgerblue" />
+
+                        <TextView
+                            android:id="@+id/tvSetReadTriad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/size3"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:padding="@dimen/size5"
+                            android:text="@string/setting"
+                            android:textColor="@color/dodgerblue" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="@dimen/device_tip_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wireless_imei" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/device_imei_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/wireless_imei_hint"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/read_imei_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size5"
+                        android:layout_marginRight="8dp"
+                        android:background="@null"
+                        android:text="@string/read"
+                        android:textColor="@color/dodgerblue" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/device_tip_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wireless_rssi" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/gprs_num_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/factory_num_hint"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/read_gprs_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size5"
+                        android:layout_marginRight="8dp"
+                        android:background="@null"
+                        android:text="@string/read"
+                        android:textColor="@color/dodgerblue" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/tx_info"
+                android:textColor="@color/royalblue" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="@dimen/size150"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tx_one_zy" />
+
+                <EditText
+                    android:id="@+id/tx_one_zy_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="rssi：" />
+
+                <EditText
+                    android:id="@+id/tx_one_rssi_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:maxLength="4" />
+
+
+            </LinearLayout>
+
+
+            <!--天线2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="@dimen/size150"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tx_two_zy" />
+
+                <EditText
+                    android:id="@+id/tx_two_zy_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="rssi：" />
+
+                <EditText
+                    android:id="@+id/tx_two_rssi_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:maxLength="4" />
+            </LinearLayout>
+
+
+            <!--天线3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="@dimen/size150"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tx_three_zy" />
+
+                <EditText
+                    android:id="@+id/tx_three_zy_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="rssi：" />
+
+                <EditText
+                    android:id="@+id/tx_three_rssi_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:maxLength="4" />
+            </LinearLayout>
+
+
+            <!--天线4-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/size150"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tx_four_zy" />
+
+                <EditText
+                    android:id="@+id/tx_four_zy_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="rssi：" />
+
+                <EditText
+                    android:id="@+id/tx_four_rssi_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:maxLength="4" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="@dimen/size150"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quchong_guolv" />
+
+                <EditText
+                    android:id="@+id/filter_et"
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:hint="180"
+                    android:inputType="number"
+                    android:maxLength="5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="@dimen/size150"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stop_time" />
+
+                <EditText
+                    android:id="@+id/stop_time_et"
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:hint="180"
+                    android:inputType="number"
+                    android:maxLength="5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="@dimen/size170"
+                    android:layout_height="wrap_content"
+                    android:text="@string/direction_filter" />
+
+                <EditText
+                    android:id="@+id/direction_time_et"
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:hint="180"
+                    android:inputType="number"
+                    android:maxLength="5" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/beep_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/open_buzzer" />
+
+            <CheckBox
+                android:id="@+id/dhcp_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/open_dhcp" />
+
+            <CheckBox
+                android:id="@+id/open_direction_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/open_direction_filter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/wire_network_params"
+                android:textColor="@color/royalblue" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+                <TextView
+                    android:layout_width="@dimen/size100"
+                    android:layout_height="wrap_content"
+                    android:text="@string/local_ip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/lan_ip_et"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="192.168.1.199"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lanip_clear_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/a1o"
+                        android:scaleType="centerInside"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+                <TextView
+                    android:layout_width="@dimen/size100"
+                    android:layout_height="wrap_content"
+                    android:text="@string/local_port" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+                    <!--设备ID-->
+                    <EditText
+                        android:id="@+id/lan_port_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="0~65536"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lanport_clear_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/a1o"
+                        android:scaleType="centerInside"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+                <TextView
+                    android:layout_width="@dimen/size100"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sub_net_mask" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/lan_zwym_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="255.255.255.0"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lanzwym_clear_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/a1o"
+                        android:scaleType="centerInside"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+                <TextView
+                    android:layout_width="@dimen/size100"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gateway" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/lan_wg_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="192.168.1.1"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lanwg_clear_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/a1o"
+                        android:scaleType="centerInside"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+                <TextView
+                    android:layout_width="@dimen/size100"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plat_ip_2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/lan_fwip_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="192.168.0.100"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lanfwip_clear_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/a1o"
+                        android:scaleType="centerInside"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <requestFocus />
+
+                <TextView
+                    android:layout_width="@dimen/size100"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plat_port_2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/lan_fwport_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="0~65536"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lanfwport_clear_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/a1o"
+                        android:scaleType="centerInside"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/controller_status"
+                android:textColor="@color/royalblue" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/size100"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sys_time" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/system_time_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/sys_time_hint"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/read_systime_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size5"
+                        android:layout_marginRight="15dp"
+                        android:background="@null"
+                        android:text="@string/read"
+                        android:textColor="@color/dodgerblue" />
+
+
+                    <TextView
+                        android:id="@+id/set_systime_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:text="@string/setting"
+                        android:textColor="@color/dodgerblue" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/size100"
+                    android:layout_height="wrap_content"
+                    android:text="@string/network_status" />
+
+
+                <TextView
+                    android:id="@+id/net_state_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:textColor="@drawable/bg_text"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/size100"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wirless_connect_ip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/gprs_connect_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/factory_num_hint"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/read_gprs_connect_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size5"
+                        android:background="@null"
+                        android:text="@string/read"
+                        android:textColor="@color/dodgerblue" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/size100"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wire_connect_ip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg_style"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/lan_connect_et"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/factory_num_hint"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/read_lan_connect_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size5"
+                        android:background="@null"
+                        android:text="@string/read"
+                        android:textColor="@color/dodgerblue" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_cache_total" />
+
+                <TextView
+                    android:id="@+id/read_cache_tagnum_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/read"
+                    android:textColor="@color/dodgerblue" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="@dimen/size10"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wireless" />
+
+                <EditText
+                    android:id="@+id/wx_tagnum_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/wire" />
+
+                <EditText
+                    android:id="@+id/yx_tagnum_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/filter" />
+
+                <EditText
+                    android:id="@+id/gl_tagnum_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg_style"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </com.guoji.mobile.cocobee.view.CustomScrollView>
+
+    <LinearLayout
+        android:id="@+id/input_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tab_bg"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/input_uplo_dasta"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/upload_info"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/input_read_tag"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/read_device_info"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/input_save_data"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/set_params"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>
